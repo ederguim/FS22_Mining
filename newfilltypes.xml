@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd">
+
+	<fillTypes>
+		<fillType name="DIRT" title="Dirt" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.05" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_dirt.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/dirt_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/dirt_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/dirtDistance_diffuse.dds" />
+        </fillType>
+		<fillType name="TAILINGS" title="Tailings" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.1" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_ballast.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/ballast_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/ballast_normal.dds"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/ballastDistance_diffuse.dds" />
+        </fillType>
+
+		<fillType name="CONCENTRATE" title="Concentrate" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_terra.png" />
+			 <pallet     filename="pallet/concentratePallet/concentratePallet.xml" />
+        </fillType>
+
+		<fillType name="STEELROLL" title="Steelroll" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_steel.png" />
+			 <pallet     filename="pallet/steelrollPallet/steelrollPallet.xml" />
+        </fillType>
+
+		<fillType name="PIPE" title="Pipe" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_steel.png" />
+			 <pallet     filename="pallet/pipePallet/pipePallet.xml" />
+        </fillType>
+
+		<fillType name="GEMDIRT" title="Gemdirt" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_gemdirt.png" />
+			 <pallet     filename="pallet/gemdirtPallet/gemdirtPallet.xml" />
+        </fillType>
+
+		<fillType name="RUBY" title="Ruby" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_rubyPallet.png" />
+			 <pallet     filename="pallet/rubyPallet/rubyPallet.xml" />
+        </fillType>
+
+		<fillType name="DIAMOND" title="Diamond" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_diamondPallet.png" />
+			 <pallet     filename="pallet/diamondPallet/diamondPallet.xml" />
+        </fillType>
+
+		<fillType name="EMERALD" title="Emerald" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_emeraldPallet.png" />
+			 <pallet     filename="pallet/emeraldPallet/emeraldPallet.xml" />
+        </fillType>
+
+		<fillType name="SAPPHIRE" title="Sapphire" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_sapphirePallet.png" />
+			 <pallet     filename="pallet/sapphirePallet/sapphirePallet.xml" />
+        </fillType>
+
+		<fillType name="OPAL" title="Opal" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_opalPallet.png" />
+			 <pallet     filename="pallet/opalPallet/opalPallet.xml" />
+        </fillType>
+
+		<fillType name="SUNSTONE" title="Sunstone" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_sunstonePallet.png" />
+			 <pallet     filename="pallet/sunstonePallet/sunstonePallet.xml" />
+        </fillType>
+
+		<fillType name="TANZANITE" title="Tanzanite" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_tanzanitePallet.png" />
+			 <pallet     filename="pallet/tanzanitePallet/tanzanitePallet.xml" />
+        </fillType>
+
+		<fillType name="CRUDEOIL" title="Crudeoil" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_crudeoil.png" />
+			 <pallet     filename="pallet/crudePallet/crudePallet.xml" />
+        </fillType>
+
+		<fillType name="ANHYDROUS" title="Anhydrous" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_anhydrous.png" />
+			 <pallet     filename="pallet/Anhydrous/Anhydrous.xml" />
+        </fillType>
+
+		<fillType name="DIESEL" title="Diesel" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_diesel.png" />
+			 <pallet     filename="pallet/dieselPallet/dieselPallet.xml" />
+        </fillType>
+
+		<fillType name="ETHANOL" title="Ethanol" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_ethanol.png" />
+			 <pallet     filename="pallet/barrelPallet/ethanolPallet.xml" />
+        </fillType>
+
+		<fillType name="VODKA" title="Vodka" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_vodka.png" />
+			 <pallet     filename="pallet/barrelPallet/vodkaPallet.xml" />
+        </fillType>
+
+		<fillType name="WHISKEY" title="Whiskey" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_Pallet.png" />
+			 <pallet     filename="pallet/barrelPallet/whiskeyPallet.xml" />
+        </fillType>
+		<fillType name="WINE" title="Wine" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_wine.png" />
+			 <pallet     filename="pallet/barrelPallet/winePallet.xml" />
+        </fillType>
+
+		<fillType name="BRASS" title="Brass Pure" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.7" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_brass.png" />
+			 <pallet     filename="pallet/barsPallet/brassPallet.xml" />
+        </fillType>	
+		<fillType name="COPPER" title="Copper Pure" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.5" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_copper.png" />
+			 <pallet     filename="pallet/barsPallet/copperPallet.xml" />
+        </fillType>	
+		<fillType name="LEAD" title="Lead Pure" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_lead.png" />
+			 <pallet     filename="pallet/barsPallet/leadPallet.xml" />
+        </fillType>
+		<fillType name="ALUM" title="Aluminium" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.9" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_aluminium.png" />
+			 <pallet     filename="pallet/barsPallet/aluminiumPallet.xml" />
+        </fillType>
+	
+		<fillType name="GOLD" title="$l10n_fillType_gold" showOnPriceTable="true">
+            <physics massPerLiter="0,001" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="42.0">
+			    <factors>
+                    <factor period="1"  value="0.88" />
+                    <factor period="2"  value="0.92" />
+                    <factor period="3"  value="1.02" />
+                    <factor period="4"  value="1.04" />
+                    <factor period="5"  value="1.10" />
+                    <factor period="6"  value="1.03" />
+                    <factor period="7"  value="1.01" />
+                    <factor period="8"  value="0.97" />
+                    <factor period="9"  value="0.95" />
+                    <factor period="10" value="0.93" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.90" />
+                </factors>
+            </economy>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_gold.png" />
+			<pallet     filename="pallets/goldPallet/goldPallet.xml" />
+        </fillType>	
+		
+		<fillType name="GOLDBAR" title="Gold Bars" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0,001" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="48.0" >
+			    <factors>
+                    <factor period="1"  value="0.88" />
+                    <factor period="2"  value="0.92" />
+                    <factor period="3"  value="1.02" />
+                    <factor period="4"  value="1.04" />
+                    <factor period="5"  value="1.10" />
+                    <factor period="6"  value="1.03" />
+                    <factor period="7"  value="1.01" />
+                    <factor period="8"  value="0.97" />
+                    <factor period="9"  value="0.95" />
+                    <factor period="10" value="0.93" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.90" />
+                </factors>
+			</economy>
+            <image    hud="fillPlanesTP/fruit_tp_hud/hud_fill_goldbar.png" />
+			<pallet   filename="pallets/goldBarPallet/goldBarPallet.xml" />
+        </fillType>	
+				
+		<fillType name="POTASSIUM" title="Potassium" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.3" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_potassium.png" />
+			 <pallet     filename="pallet/chemicalPallet/potassiumPallet.xml" />
+        </fillType>	
+		<fillType name="SULFURA" title="Sulfuric Acid" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.3" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_sulfura.png" />
+			 <pallet     filename="pallet/chemicalPallet/sulfuraPallet.xml" />
+        </fillType>
+		<fillType name="NAPHTHA" title="Naphtha" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.3" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_naphtha.png" />
+			 <pallet     filename="pallet/naphthaPallet/naphthaPallet.xml" />
+        </fillType>
+		<fillType name="PLASTICS" title="Plastics" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_plastics.png" />
+			 <pallet     filename="pallet/plasticsPallet/plasticsPallet.xml" />
+        </fillType>
+		<fillType name="GREASE" title="Grease" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter=".9">
+						                <factors>
+                    <factor period="1"  value="1.60" />
+                    <factor period="2"  value="1.47" />
+                    <factor period="3"  value="1.39" />
+                    <factor period="4"  value="1.1" />
+                    <factor period="5"  value=".8" />
+                    <factor period="6"  value="1" />
+                    <factor period="7"  value="1" />
+                    <factor period="8"  value="1.2" />
+                    <factor period="9"  value="1.28" />
+                    <factor period="10" value="1.35" />
+                    <factor period="11" value="1.51" />
+                    <factor period="12" value="1.78" />
+                </factors>
+            </economy>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_grease.png" />
+			 <pallet     filename="pallet/greasePallet/greasePallet.xml" />
+        </fillType>
+		<fillType name="WASTE" title="Waste" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter=".5" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_waste.png" />
+			 <pallet     filename="pallet/wastePallet/wastePallet.xml" />
+        </fillType>	
+		<fillType name="LITHIUM" title="Lithium" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="2.2"/>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_lithium.png" />
+			 <pallet     filename="pallet/lithiumPallet/lithiumPallet.xml" />
+        </fillType>
+		<fillType name="PARTS" title="Parts" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.7" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter=".9" >
+					                <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="1.2" />
+                    <factor period="5"  value="1.4" />
+                    <factor period="6"  value="1.81" />
+                    <factor period="7"  value="1.86" />
+                    <factor period="8"  value="1.69" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_parts.png" />
+			 <pallet     filename="pallet/partsPallet/partsPallet.xml" />
+        </fillType>
+
+		<fillType name="TOOLS" title="Tools" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.2" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter=".9" >
+			    <factors>
+                    <factor period="1"  value="1.00" />
+                    <factor period="2"  value="1.07" />
+                    <factor period="3"  value="0.99" />
+                    <factor period="4"  value="1.2" />
+                    <factor period="5"  value="1.4" />
+                    <factor period="6"  value="1.81" />
+                    <factor period="7"  value="1.86" />
+                    <factor period="8"  value="1.69" />
+                    <factor period="9"  value="1.08" />
+                    <factor period="10" value="1.13" />
+                    <factor period="11" value="1.21" />
+                    <factor period="12" value="1.08" />
+                </factors>
+            </economy>
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_tools.png" />
+			 <pallet     filename="pallet/toolsPallet/toolsPallet.xml" />
+        </fillType>
+        <fillType name="METHANE" title="$l10n_fillType_methane" showOnPriceTable="true" unitShort="$l10n_unit_kg">
+            <physics massPerLiter="0.09" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="0.8">
+
+            </economy>			
+			
+            <image      hud     ="$dataS/menu/hud/fillTypes/hud_fill_methane.png" />
+			 <pallet     filename="pallet/methanePallet/methanePallet.xml" />
+
+        </fillType>
+		
+        <fillType name="PROPANE" title="Propane" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.0" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="0.93" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_propane.png" />
+			<pallet     filename="pallet/methanePallet/propanePallet.xml" />
+        </fillType>
+		<fillType name="ZINC" title="Zinc Pure" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="1.4" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_zinc.png" />
+			 <pallet     filename="pallet/barsPallet/zincPallet.xml" />
+        </fillType>	       
+
+	  <fillType name="SCRAP" title="scrap" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.4" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter=".7" />
+            <image      hud     ="fillplanesTP/fruit_tp_hud/hud_fill_scrap.png" />
+            <pallet     filename="pallet/scrapPallet/scrapPallet.xml" />
+            <effects prioritizedEffectType="ParticleEffect" fillSmokeColor="0.8 0.8 0.8 1"/> 
+            <textures   diffuse ="$data/fillPlanes/manure_diffuse.png"
+                        normal  ="$data/fillPlanes/manure_normal.png"
+                        specular="$data/fillPlanes/manure_specular.png"
+                        distance="$data/fillPlanes/distance/manureDistance_diffuse.png" />				
+	  </fillType>
+
+	  <fillType name="SCRAP2" title="scrap2" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.5" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter=".9" />
+            <image      hud     ="fillplanesTP/fruit_tp_hud/hud_fill_scrap2.png" />
+            <pallet     filename="pallet/scrapPallet/scrap2Pallet.xml" />
+            <effects prioritizedEffectType="ParticleEffect" fillSmokeColor="0.8 0.8 0.8 1"/> 
+            <textures   diffuse ="$data/fillPlanes/manure_diffuse.png"
+                        normal  ="$data/fillPlanes/manure_normal.png"
+                        specular="$data/fillPlanes/manure_specular.png"
+                        distance="$data/fillPlanes/distance/manureDistance_diffuse.png" />				
+	  </fillType>
+
+		<fillType name="STEEL_IBS" title="steelBeam" showOnPriceTable="true"  unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".6" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="3.2" />
+            <image      hud     ="fillplanesTP/fruit_tp_hud/hud_fill_steelBeam.png" />
+			 <pallet     filename="pallet/steelPallet/iBeamPallet.xml" />
+        </fillType>
+		<fillType name="RUBBER" title="rubber" showOnPriceTable="true"  unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter=".8" />
+            <image      hud     ="fillplanesTP/fruit_tp_hud/hud_fill_rubber.png" />
+			 <pallet     filename="pallet/rubberPallet/rubberPallet.xml" />
+        </fillType>
+		
+
+
+
+
+	</fillTypes>	
+    <fillTypeCategories>
+		<fillTypeCategory name="DBPRODUCTS">ETHANOL VODKA    SCRAP SCRAP2 LITHIUM WHISKEY WINE DIRT CRUDEOIL DIESEL ANHYDROUS TANZANITE SUNSTONE OPAL PIPE SAPPHIRE EMERALD  DIAMOND RUBY GEMDIRT TAILINGS GOLD </fillTypeCategory>
+        <fillTypeCategory name="LIQUID" >SULFURA MILK WATER POTASSIUM METHANE WASTE DIESEL DEF TAR CRUDEOIL NAPHTHA GREASE WASTE ETHANOL WHISKEY VODKA PROPANE ANHYDROUS</fillTypeCategory>
+		<fillTypeCategory name="PRODUCT">DIRT ETHANOL VODKA STEELROLL SCRAP2 TOOLS PARTS LITHIUM WASTE PLASTICS NAPHTHA GREASE SULFURA ZINC PROPANE METHANE POTASSIUM GOLDBAR ALUM LEAD BRASS COPPER WHISKEY WINE CRUDEOIL  DIESEL SUNSTONE ANHYDROUS TANZANITE OPAL PIPE SAPPHIRE DIAMOND EMERALD RUBY GEMDIRT TAILINGS GOLD</fillTypeCategory>
+		<fillTypeCategory name="BULK" >DIRT ETHANOL VODKA      SCRAP2  POTASSIUM ZINC PROPANE METHANE PARTS TOOLS LITHIUM WASTE PLASTICS NAPHTHA SULFURA POTASSIUM WHISKEY WINE CRUDEOIL OPAL DIESEL ANHYDROUS TANZANITE SUNSTONE PIPE RUBY SAPPHIRE DIAMOND EMERALD GEMDIRT TAILINGS GOLD</fillTypeCategory>
+		<fillTypeCategory name="SHOVEL" >DIRT ETHANOL   TOOLS PARTS WASTE GREASE VODKA WHISKEY WINE OPAL TANZANITE SUNSTONE PIPE RUBY SAPPHIRE DIAMOND EMERALD GEMDIRT TAILINGS GOLD</fillTypeCategory>
+		<fillTypeCategory name="TRAINWAGON" >DIRT ETHANOL     SCRAP SCRAP2  ZINC METHANE PROPANE TOOLS PARTS LITHIUM GREASE PLASTICS  NAPHTHA SULFURA POTASSIUM VODKA WHISKEY WINE OPAL PIPE DIESEL CRUDEOIL ANHYDROUS TANZANITE SUNSTONE RUBY SAPPHIRE DIAMOND EMERALD GEMDIRT CONCENTRATE TAILINGS GOLD</fillTypeCategory>
+    </fillTypeCategories>
+	
+	
+    <fillTypeSounds>
+        <fillTypeSound fillTypes="DIRT CONCENTRATE TAILINGS PIPE  DIESEL ANHYDROUS TANZANITE SUNSTONE OPAL SAPPHIRE EMERALD DIAMOND RUBY GEMDIRT GOLD">
+            <sound template="grainLargeFill"/>
+        </fillTypeSound>
+    </fillTypeSounds>
+</map>

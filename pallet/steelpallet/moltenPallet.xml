@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>steelMoltenBucket</name>
+        <image>fillplane/fruit_tp_hud/hud_fill_steelMolten.png</image>
+        <category>pallets</category>
+		<price>700</price>
+        <brand>SCRAP</brand>
+        <showInStore>false</showInStore>
+        <canBeSold>false</canBeSold>
+        <financeCategory>OTHER</financeCategory>
+        <vertexBufferMemoryUsage>75264</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>14848</indexBufferMemoryUsage>
+        <textureMemoryUsage>2031616</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_mbucket</typeDesc>
+        <filename>pallet/steelPallet/moltenPallet.i3d</filename>
+        <size width="1.4" length="1" height="1.1" />
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="800"/>
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false" />
+        <input allowed="true"/>		
+    </base>
+
+
+
+     
+
+
+    <animations>
+        <animation name="fillAnimation">
+            <part node="movmagma" startTime="0.000" endTime="0.001" visibility="false" />
+            <part node="movmagma" startTime="0.0011" endTime="1.000" visibility="true" />
+            <part node="movmagma" startTime="0.0011" endTime="1.00" startTrans="0 1.45219254 0" endTrans="0 2.42139006 0"  />
+            <sound template="dischargeLoop" startTime="0.001" direction="-1" pitchScale="0.4" />
+          
+        </animation>
+    </animations>
+	
+    <fillVolume>
+        <fillVolumeConfigurations>
+            <fillVolumeConfiguration>
+                <volumes>
+<!--                     <volume node="fillVolume" maxAllowedHeapAngle="-10" fillUnitIndex="1" />
+ -->                </volumes>
+            </fillVolumeConfiguration>
+        </fillVolumeConfigurations>
+    </fillVolume>	
+	
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="MOLTEN" capacity="2000">
+                        <fillLevelAnimation name="fillAnimation" resetOnEmpty="true" />
+                        <exactFillRootNode node="exactFillRootNode" />
+						
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="dischargeNode" emptySpeed="200" fillUnitIndex="1" maxDistance="2" canStartDischargeAutomatically="true" playSound="true"/>
+ 
+            <dischargeStateSound template="palletsOil2"/>
+
+ </dischargeable>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="SlagPot_vis"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="ibeamPallet_component1" node="0>" />
+        <i3dMapping id="dynamicMountTrigger" node="0>1" />
+        <i3dMapping id="dischargeNode" node="0>2" />
+        <i3dMapping id="exactFillRootNode" node="0>6|0" />
+        <i3dMapping id="fillTrigger" node="0>6|1" />
+        <i3dMapping id="fillVolume" node="0>6|2" />
+
+		
+		
+		
+
+        <i3dMapping id="movmagma" node="0>4|0|0" />
+        <i3dMapping id="SlagPot_vis" node="0>4|0" />
+
+
+    </i3dMappings>
+</vehicle>

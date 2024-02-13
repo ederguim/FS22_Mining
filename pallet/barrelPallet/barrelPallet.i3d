@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="6" filename="$data/maps/textures/shared/props/woodBarrel_diffuse.png"/>
+    <File fileId="7" filename="$data/maps/textures/shared/props/woodBarrel_normal.png"/>
+    <File fileId="8" filename="$data/maps/textures/shared/props/woodBarrel_specular.png"/>
+    <File fileId="2" filename="$data/objects/pallets/euroPallet01_diffuse.png"/>
+    <File fileId="3" filename="$data/objects/pallets/euroPallet01_normal.png"/>
+    <File fileId="4" filename="$data/objects/pallets/euroPallet01_specular.png"/>
+    <File fileId="5" filename="$data/objects/pallets/euroPallet02_diffuse.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="euroPallet01_mat" materialId="13">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="euroPallet01_mat1" materialId="14">
+      <Texture fileId="5"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="lambert1" materialId="4" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="woodBarrel_mat" materialId="5">
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="barrelPallet.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="spiritsPallet_component1" dynamic="true" compound="true" collisionMask="2109442" density="0.0001" clipDistance="150" nodeId="99" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="2" name="euroPalletVis" nodeId="100" materialIds="13" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="pallet02_mat" visibility="false" clipDistance="1" nodeId="101" materialIds="14" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="4" name="dynamicMountTrigger" translation="0 0.0904753 0" visibility="false" kinematic="true" trigger="true" collisionMask="134217728" nodeId="102" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="dischargeNode" translation="0 0.6 0" nodeId="103"/>
+        <TransformGroup name="cols" visibility="false" clipDistance="10" nodeId="104">
+          <Shape shapeId="5" name="solidCol" compoundChild="true" collisionMask="16781578" density="0.0001" nodeId="105" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="6" name="colChunk_back_left" compoundChild="true" collisionMask="12552" nodeId="106" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="7" name="colChunk_back_center" compoundChild="true" collisionMask="12288" nodeId="107" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="8" name="colChunk_back_right" compoundChild="true" collisionMask="12552" nodeId="108" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="9" name="colChunk_center_left" compoundChild="true" collisionMask="12288" nodeId="109" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="10" name="colChunk_center_right" compoundChild="true" collisionMask="12288" nodeId="110" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="11" name="colChunk_front_left" compoundChild="true" collisionMask="12552" nodeId="111" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="12" name="colChunk_front_center" compoundChild="true" collisionMask="12288" nodeId="112" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="13" name="colChunk_front_right" compoundChild="true" collisionMask="12552" nodeId="113" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="content" nodeId="114">
+          <Shape shapeId="14" name="woodBarrelClosed" lockedgroup="true" translation="0 0.144794 0" rotation="-8.26134e-06 0 0" clipDistance="70" nodeId="115" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="contentCols" visibility="false" nodeId="116">
+          <Shape shapeId="15" name="col" translation="0 0.143168 -8.88178e-18" static="true" compoundChild="true" nodeId="118" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="triggers" nodeId="119">
+          <Shape shapeId="16" name="fillTrigger" translation="0 0.348315 0" visibility="false" kinematic="true" compound="true" trigger="true" collisionMask="1075838976" clipDistance="300" nodeId="120" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="decal" translation="-0.002 1.05987 -0.00816213" nodeId="123"/>
+      </Shape>
+  </Scene>
+
+</i3D>

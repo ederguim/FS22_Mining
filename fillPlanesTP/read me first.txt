@@ -1,0 +1,23 @@
+For players:
+
+If you download this and think this is a mod, delete.
+
+For modders:
+
+1- put the folder fillPlanesTP inside your map
+2- open your map.xml and add this: 
+
+	<fillTypes filename="maps/mapUS/fillPlanesTP/maps_fillTypes.xml" />
+	<densityMapHeightTypes filename="maps/mapUS/fillPlanesTP/maps_densityMapHeightTypes.xml" />
+
+remember you need indicate the right path for fillPlanesTP folder. On my case is "maps/mapUS/" you need pay attention the path you have.
+
+If you make this right you already have the new filltypes on your map. 
+
+3- add the filltypes as a pile on your map. Open your map with Giants Editor version 9.0.1 or highter and consult the fruitTPcode.xml I provide with the channels for terrainDetailHeigh (if you dont know what is this search for tutorials).
+
+If you have doubts go to my discord channel i try help you.
+
+Enjoy the files ;)
+
+

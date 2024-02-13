@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Base4X_IWMM" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="9" filename="$data/maps/mapFR/textures/props/gasCylinderCagesAlpha_diffuse.png"/>
+    <File fileId="10" filename="$data/maps/mapFR/textures/props/gasCylinderCagesAlpha_normal.png"/>
+    <File fileId="6" filename="$data/maps/mapFR/textures/props/gasCylinderCages_diffuse.png"/>
+    <File fileId="7" filename="$data/maps/mapFR/textures/props/gasCylinderCages_normal.png"/>
+    <File fileId="8" filename="$data/maps/mapFR/textures/props/gasCylinderCages_specular.png"/>
+    <File fileId="12" filename="$data/maps/mapUS/textures/props/gasBottleShelf_diffuse.png"/>
+    <File fileId="13" filename="$data/maps/mapUS/textures/props/gasBottleShelf_normal.png"/>
+    <File fileId="14" filename="$data/maps/mapUS/textures/props/gasBottleShelf_specular.png"/>
+    <File fileId="2" filename="$data/objects/pallets/euroPallet01_diffuse.png"/>
+    <File fileId="3" filename="$data/objects/pallets/euroPallet01_normal.png"/>
+    <File fileId="4" filename="$data/objects/pallets/euroPallet01_specular.png"/>
+    <File fileId="5" filename="$data/objects/pallets/euroPallet02_diffuse.png"/>
+    <File fileId="11" filename="$data/shaders/decalShader.xml"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="euroPallet01_mat" materialId="4">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="euroPallet01_mat1" materialId="5">
+      <Texture fileId="5"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="gasBottleShelf_mat" materialId="75">
+      <Texture fileId="12"/>
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+    </Material>
+    <Material name="gasCylinderCages_mat" materialId="6">
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="gasCylinderCagesFence_mat" materialId="7" alphaBlending="true" customShaderId="11">
+      <Texture fileId="9"/>
+      <Normalmap fileId="10"/>
+      <Glossmap fileId="8"/>
+      <CustomParameter name="placeableColorScale" value="0 1 0 0"/>
+    </Material>
+    <Material name="lambert1" materialId="9" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="propanePallet.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="propanePallet_component1" dynamic="true" compound="true" collisionMask="2109442" density="0.0001" clipDistance="150" nodeId="30" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="2" name="euroPalletVis" nodeId="31" materialIds="4" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="pallet02_mat" visibility="false" clipDistance="1" nodeId="32" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="4" name="dynamicMountTrigger" translation="0 0.0904753 0" visibility="false" kinematic="true" trigger="true" collisionMask="134217728" nodeId="33" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="dischargeNode" translation="0 0.6 0" nodeId="34"/>
+        <TransformGroup name="cols" visibility="false" clipDistance="10" nodeId="35">
+          <Shape shapeId="5" name="solidCol" compoundChild="true" collisionMask="16781578" density="0.0001" nodeId="36" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="6" name="colChunk_back_left" compoundChild="true" collisionMask="12552" nodeId="37" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="7" name="colChunk_back_center" compoundChild="true" collisionMask="12288" nodeId="38" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="8" name="colChunk_back_right" compoundChild="true" collisionMask="12552" nodeId="39" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="9" name="colChunk_center_left" compoundChild="true" collisionMask="12288" nodeId="40" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="10" name="colChunk_center_right" compoundChild="true" collisionMask="12288" nodeId="41" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="11" name="colChunk_front_left" compoundChild="true" collisionMask="12552" nodeId="42" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="12" name="colChunk_front_center" compoundChild="true" collisionMask="12288" nodeId="43" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="13" name="colChunk_front_right" compoundChild="true" collisionMask="12552" nodeId="44" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="content" nodeId="45">
+          <TransformGroup name="1" nodeId="46">
+            <Shape shapeId="14" name="gasCylinderCage01" lockedgroup="true" translation="0 0 0.007" clipDistance="100" nodeId="47" materialIds="6" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="15" name="gasCylinderCage01Fence" clipDistance="50" nodeId="48" materialIds="7" castsShadows="true" receiveShadows="true"/>
+            </Shape>
+            <Shape shapeId="16" name="gasBottle" translation="0.398 0.144671 0.157284" clipDistance="30" nodeId="78" materialIds="75" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="gasBottle" translation="0.398 0.144671 -0.18059" clipDistance="30" nodeId="79" materialIds="75" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="gasBottle" translation="-0.0115581 0.144671 -0.18059" clipDistance="30" nodeId="80" materialIds="75" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="gasBottle" translation="-0.0115581 0.144671 0.157284" clipDistance="30" nodeId="81" materialIds="75" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="gasBottle" translation="-0.402295 0.144671 -0.18059" clipDistance="30" nodeId="82" materialIds="75" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="gasBottle" translation="-0.402295 0.144671 0.157284" clipDistance="30" nodeId="83" materialIds="75" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="2" translation="0 0.544753 0" nodeId="57">
+            <Shape shapeId="14" name="gasCylinderCage01" lockedgroup="true" translation="0 0 0.007" clipDistance="100" nodeId="58" materialIds="6" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="15" name="gasCylinderCage01Fence" clipDistance="50" nodeId="59" materialIds="7" castsShadows="true" receiveShadows="true"/>
+            </Shape>
+            <Shape shapeId="16" name="gasBottle" translation="0.398 0.144671 0.157284" clipDistance="30" nodeId="84" materialIds="75" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="gasBottle" translation="0.398 0.144671 -0.18059" clipDistance="30" nodeId="85" materialIds="75" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="gasBottle" translation="-0.0115581 0.144671 -0.18059" clipDistance="30" nodeId="86" materialIds="75" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="gasBottle" translation="-0.0115581 0.144671 0.157284" clipDistance="30" nodeId="87" materialIds="75" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="gasBottle" translation="-0.402295 0.144671 -0.18059" clipDistance="30" nodeId="88" materialIds="75" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="gasBottle" translation="-0.402295 0.144671 0.157284" clipDistance="30" nodeId="89" materialIds="75" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="contentCols" visibility="false" nodeId="68">
+          <Shape shapeId="17" name="tireBoxCol01" translation="0 0.389102 -2.11758e-24" rotation="0 0 90" compoundChild="true" nodeId="69" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="17" name="tireBoxCol01" translation="0 0.933833 -2.11758e-24" rotation="0 0 90" compoundChild="true" nodeId="70" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="triggers" nodeId="71">
+          <Shape shapeId="18" name="fillTrigger" translation="0 0.348315 0" visibility="false" kinematic="true" compound="true" trigger="true" collisionMask="1075838976" clipDistance="300" nodeId="72" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+      </Shape>
+  </Scene>
+
+</i3D>

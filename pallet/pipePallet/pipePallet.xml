@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Pipe Pallet</name>
+        <image>pallet/pipePallet/store.png</image>
+        <category>misc</category>
+		<price>700</price>
+
+        <brand>Lizard</brand>
+        <showInStore>false</showInStore>
+        <canBeSold>false</canBeSold>
+        <financeCategory>OTHER</financeCategory>
+        <vertexBufferMemoryUsage>75264</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>14848</indexBufferMemoryUsage>
+        <textureMemoryUsage>2031616</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_pallet</typeDesc>
+        <filename>pallet/pipePallet/pipePallet.i3d</filename>
+        <size width="1.4" length="1" height="1.1" />
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="250"/>
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false" />
+    </base>
+
+
+
+     
+
+
+    <animations>
+        <animation name="fillAnimation">
+            <part node="bakeryBox01" startTime="0.000" endTime="0.001" visibility="false" />
+            <part node="bakeryBox01" startTime="0.001" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.001" direction="-1" pitchScale="0.8" />
+
+            <part node="bakeryBox02" startTime="0.000" endTime="0.143" visibility="false" />
+            <part node="bakeryBox02" startTime="0.143" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.143" direction="-1" pitchScale="0.8" />
+
+            <part node="bakeryBox03" startTime="0.000" endTime="0.286" visibility="false" />
+            <part node="bakeryBox03" startTime="0.286" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.286" direction="-1" pitchScale="0.8" />
+
+            <part node="bakeryBox04" startTime="0.000" endTime="0.429" visibility="false" />
+            <part node="bakeryBox04" startTime="0.429" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.429" direction="-1" pitchScale="0.8" />
+
+            <part node="bakeryBox05" startTime="0.000" endTime="0.571" visibility="false" />
+            <part node="bakeryBox05" startTime="0.571" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.571" direction="-1" pitchScale="0.8" />
+			
+			
+			
+            <part node="steelRoll6" startTime="0.000" endTime="0.614" visibility="false" />
+            <part node="steelRoll6" startTime="0.614" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.614" direction="-1" pitchScale="0.8" />
+			
+            <part node="steelRoll7" startTime="0.000" endTime="0.714" visibility="false" />
+            <part node="steelRoll7" startTime="0.714" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.714" direction="-1" pitchScale="0.8" />			
+
+            <part node="steelRoll8" startTime="0.000" endTime="0.8" visibility="false" />
+            <part node="steelRoll8" startTime="0.8" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.8" direction="-1" pitchScale="0.8" />
+			
+            <part node="steelRoll9" startTime="0.000" endTime="0.87" visibility="false" />
+            <part node="steelRoll9" startTime="0.87" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.87" direction="-1" pitchScale="0.8" />			
+			
+            <part node="steelRoll10" startTime="0.000" endTime="0.91" visibility="false" />
+            <part node="steelRoll10" startTime="0.91" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.91" direction="-1" pitchScale="0.8" />				
+
+            <part node="steelRoll11" startTime="0.000" endTime="0.979" visibility="false" />
+            <part node="steelRoll11" startTime="0.979" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.999" direction="-1" pitchScale="0.8" />
+		
+            <part node="strap" startTime="0.000" endTime="0.999" visibility="false" />
+            <part node="strap" startTime="0.999" endTime="1.000" visibility="true" />
+
+            <sound template="palletsFillPlastic" startTime="0.999" direction="-1" pitchScale="0.8" />			
+
+          
+        </animation>
+    </animations>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="PIPE" capacity="1000">
+                        <fillLevelAnimation name="fillAnimation" resetOnEmpty="true" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="dischargeNode" emptySpeed="200" fillUnitIndex="1" maxDistance="6" canStartDischargeAutomatically="true" playSound="false"/>
+    </dischargeable>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="bakeryBoxCol01"/>
+            <meshNode node="bakeryBoxCol02"/>
+            <meshNode node="bakeryBoxCol03"/>
+            <meshNode node="bakeryBoxCol04"/>
+            <meshNode node="0>5|4"/>
+            <meshNode node="0>5|5"/>
+            <meshNode node="0>5|6"/>
+            <meshNode node="0>5|7"/>
+            <meshNode node="0>5|8"/>
+            <meshNode node="0>5|9"/>
+            <meshNode node="0>5|10"/>
+			
+			
+
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="bakeryBoxPallet_component1" node="0>" />
+        <i3dMapping id="euroPalletVis" node="0>0" />
+        <i3dMapping id="pallet02_mat" node="0>0|0" />
+        <i3dMapping id="dynamicMountTrigger" node="0>1" />
+        <i3dMapping id="dischargeNode" node="0>2" />
+        <i3dMapping id="bakeryBox01" node="0>4|0" />
+        <i3dMapping id="bakeryBox02" node="0>4|1" />
+        <i3dMapping id="bakeryBox03" node="0>4|2" />
+        <i3dMapping id="bakeryBox04" node="0>4|3" />
+        <i3dMapping id="bakeryBox05" node="0>4|4" />
+		
+        <i3dMapping id="steelRoll6" node="0>4|5" />
+        <i3dMapping id="steelRoll7" node="0>4|6" />
+        <i3dMapping id="steelRoll8" node="0>4|7" />
+        <i3dMapping id="steelRoll9" node="0>4|8" />
+        <i3dMapping id="steelRoll10" node="0>4|9" />		
+        <i3dMapping id="steelRoll11" node="0>4|10" />		
+        <i3dMapping id="strap" node="0>4|11" />		
+		
+		
+		
+
+        <i3dMapping id="bakeryBoxCol01" node="0>5|0" />
+        <i3dMapping id="bakeryBoxCol02" node="0>5|1" />
+        <i3dMapping id="bakeryBoxCol03" node="0>5|2" />
+        <i3dMapping id="bakeryBoxCol04" node="0>5|3" />
+
+    </i3dMappings>
+</vehicle>

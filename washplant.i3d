@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="52" filename="dek/textures/Palissade.dds"/>
+    <File fileId="53" filename="dek/textures/import/Gewicht.dds"/>
+    <File fileId="43" filename="dek/textures/import/IKR.png"/>
+    <File fileId="47" filename="dek/textures/import/MetalBase0052_1_thumbhuge.dds"/>
+    <File fileId="50" filename="dek/textures/import/WoodPlanksVarious0004_thumbhuge.dds"/>
+    <File fileId="49" filename="dek/textures/import/WoodPlanksVarious0012_thumbhuge.dds"/>
+    <File fileId="44" filename="dek/textures/import/container_einrichtung.dds"/>
+    <File fileId="45" filename="dek/textures/import/flowerpot_diffuse.dds"/>
+    <File fileId="46" filename="dek/textures/import/radiator_diffuse.dds"/>
+    <File fileId="51" filename="dek/textures/import/texture4.dds"/>
+    <File fileId="42" filename="dek/textures/roadBarrierConcrete_diffuse.png"/>
+    <File fileId="29" filename="shaders/water_normal.dds"/>
+    <File fileId="5" filename="textures/ballast_diffuse.dds"/>
+    <File fileId="57" filename="textures/concentrate.dds"/>
+    <File fileId="11" filename="textures/concrete.dds"/>
+    <File fileId="8" filename="textures/debrisCrusher_diffuse.png"/>
+    <File fileId="9" filename="textures/debrisCrusher_normal.png"/>
+    <File fileId="10" filename="textures/debrisCrusher_specular.png"/>
+    <File fileId="19" filename="textures/defaultMetal_specular.dds"/>
+    <File fileId="13" filename="textures/default_normal.dds"/>
+    <File fileId="54" filename="textures/diesel.dds"/>
+    <File fileId="22" filename="textures/diesel_generator_diffuse.png"/>
+    <File fileId="23" filename="textures/diesel_generator_normal.png"/>
+    <File fileId="24" filename="textures/diesel_generator_specular.png"/>
+    <File fileId="14" filename="textures/dirt.dds"/>
+    <File fileId="1" filename="textures/dirt_diffuse.dds"/>
+    <File fileId="26" filename="textures/potatoWaste_diffuse.dds"/>
+    <File fileId="56" filename="textures/stone.dds"/>
+    <File fileId="55" filename="textures/tailings label.dds"/>
+    <File fileId="27" filename="textures/terre.dds"/>
+    <File fileId="6" filename="$data/fillPlanes/woodChips_normal.png"/>
+    <File fileId="7" filename="$data/fillPlanes/woodChips_specular.png"/>
+    <File fileId="2" filename="$data/maps/textures/shared/warningStripes_diffuse.png"/>
+    <File fileId="3" filename="$data/maps/textures/shared/warningStripes_normal.png"/>
+    <File fileId="4" filename="$data/maps/textures/shared/warningStripes_specular.png"/>
+    <File fileId="40" filename="$data/objects/motorex/motorexDecal_diffuse.png"/>
+    <File fileId="62" filename="$data/placeables/lizard/floodLights/level04/floodLight04_diffuse.png"/>
+    <File fileId="63" filename="$data/placeables/lizard/floodLights/level04/floodLight04_normal.png"/>
+    <File fileId="64" filename="$data/placeables/lizard/floodLights/level04/floodLight04_specular.png"/>
+    <File fileId="58" filename="$data/placeables/lizard/floodLights/lightsSetEmissive_diffuse.png"/>
+    <File fileId="60" filename="$data/shaders/glowShader.xml"/>
+    <File fileId="30" filename="$data/shaders/oceanShader.xml"/>
+    <File fileId="65" filename="$data/shaders/placeableShader.xml"/>
+    <File fileId="28" filename="$data/shaders/uvScrollShader.xml"/>
+    <File fileId="15" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="38" filename="$data/shared/default_normal.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="01 - Default" materialId="4">
+      <Texture fileId="11"/>
+    </Material>
+    <Material name="_Silver_" materialId="5" diffuseColor="0.74902 0.74902 0.74902 1" specularColor="0.729412 1 0.729412">
+    </Material>
+    <Material name="acmat_0" materialId="6">
+      <Texture fileId="22"/>
+      <Normalmap fileId="23"/>
+      <Glossmap fileId="24"/>
+    </Material>
+    <Material name="acmat_1" materialId="7">
+      <Texture fileId="53"/>
+    </Material>
+    <Material name="acmat_1" materialId="8" specularColor="0.2 1 0.2">
+      <Texture fileId="47"/>
+    </Material>
+    <Material name="acmat_3" materialId="9" specularColor="0.2 1 0.2">
+      <Texture fileId="49"/>
+    </Material>
+    <Material name="acmat_5" materialId="10" specularColor="0.2 1 0.2">
+      <Texture fileId="50"/>
+    </Material>
+    <Material name="Belt" materialId="11" diffuseColor="0.027451 0.027451 0.027451 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Conveyor" materialId="12" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.5 0.8 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.3 0.035 0.01 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="debrisCrusher_mat" materialId="13">
+      <Texture fileId="8"/>
+      <Normalmap fileId="9"/>
+      <Glossmap fileId="10"/>
+    </Material>
+    <Material name="default" materialId="14" diffuseColor="0.294118 0.294118 0.294118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="default_mat" materialId="15" diffuseColor="1 1 1 1" customShaderId="15" customShaderVariation="uvScroll">
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="offsetUV" value="0 0 0 1"/>
+    </Material>
+    <Material name="einrichtung_mat" materialId="16">
+      <Texture fileId="44"/>
+    </Material>
+    <Material name="floodLight04_mat" materialId="661" customShaderId="65">
+      <Texture fileId="62"/>
+      <Normalmap fileId="63"/>
+      <Glossmap fileId="64"/>
+      <CustomParameter name="placeableColorScale" value="0 1 0 0"/>
+      <CustomParameter name="snowScale" value="1 0 0 0"/>
+    </Material>
+    <Material name="flowerpot_mat" materialId="17" alphaBlending="true">
+      <Texture fileId="45"/>
+    </Material>
+    <Material name="frozen" materialId="18" alphaBlending="true" customShaderId="28">
+      <Texture fileId="27"/>
+      <CustomParameter name="offsetUV" value="0 0 0 1"/>
+    </Material>
+    <Material name="lambert1" materialId="19">
+      <Texture fileId="52"/>
+    </Material>
+    <Material name="lambert1" materialId="20">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="lambert1" materialId="21" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="lambert1" materialId="616" diffuseColor="0.498039 0.498039 0.498039 1">
+    </Material>
+    <Material name="lambert2" materialId="22">
+      <Texture fileId="43"/>
+    </Material>
+    <Material name="lightsSetEmissive_mat" materialId="662" specularColor="0.498039 1 0.498039" customShaderId="60">
+      <Texture fileId="58"/>
+      <CustomParameter name="lightControl" value="1 0.5 6 0"/>
+    </Material>
+    <Material name="little_potato" materialId="23" alphaBlending="true" customShaderId="15" customShaderVariation="uvScroll">
+      <Texture fileId="26"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="offsetUV" value="0 0 0 1"/>
+    </Material>
+    <Material name="Logo" materialId="24" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.5 0.5 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="mat_HosesJoints" materialId="25" diffuseColor="0.74902 0.00392157 0.00392157 1" customShaderId="15" customShaderVariation="colorMask">
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.05 0.05 0.05 5"/>
+      <CustomParameter name="colorMat1" value="0.01 0.01 0.01 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material #67" materialId="26">
+      <Texture fileId="51"/>
+    </Material>
+    <Material name="Material.002" materialId="27" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.4 0.3 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material.005" materialId="28" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.5 0.4 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material.007" materialId="29" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.8 0.5 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.03 0.05 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material.009" materialId="30" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.2 0.2 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material.010" materialId="31" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material.013" materialId="32" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.4 0.4 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material.014" materialId="33" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.5 0.6 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.3 0.035 0.01 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material.016" materialId="34" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.7 0.7 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.03 0.05 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material.017" materialId="35" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.7 0.7 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.3 0.035 0.01 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material.018" materialId="36" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="15" customShaderVariation="colorMask">
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="14"/>
+      <CustomParameter name="RDT" value="0.3 0.3 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="material123" materialId="37">
+      <Texture fileId="42"/>
+    </Material>
+    <Material name="Metal_Aluminum_Anodized" materialId="38" specularColor="0.827451 1 0.729412">
+    </Material>
+    <Material name="Metal_Rough" materialId="39" diffuseColor="0.6 0.611765 0.627451 1" specularColor="0.827451 1 0.827451">
+    </Material>
+    <Material name="motorexDecal_mat" materialId="40" specularColor="0.74902 1 0">
+      <Texture fileId="40"/>
+      <Normalmap fileId="38"/>
+    </Material>
+    <Material name="peeled" materialId="41" alphaBlending="true" customShaderId="15" customShaderVariation="uvScroll">
+      <Texture fileId="5"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="offsetUV" value="0 0 0 1"/>
+    </Material>
+    <Material name="phong1" materialId="42" diffuseColor="0 0.392157 0.301961 1" specularColor="0.74902 1 0">
+      <Normalmap fileId="38"/>
+    </Material>
+    <Material name="radiator_mat" materialId="43">
+      <Texture fileId="46"/>
+    </Material>
+    <Material name="Red" materialId="44" diffuseColor="1 0 0 1" specularColor="0.729412 1 0.729412">
+    </Material>
+    <Material name="sawdust_mat" materialId="45">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="46">
+      <Texture fileId="57"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="47">
+      <Texture fileId="54"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="48">
+      <Texture fileId="56"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="49">
+      <Texture fileId="55"/>
+    </Material>
+    <Material name="warningStripes_mat" materialId="50">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="waterplane_mat" materialId="51" specularColor="1 1 1" customShaderId="30">
+      <Texture fileId="29"/>
+      <Normalmap fileId="29"/>
+      <Reflectionmap lodDistanceScaling="0.5" viewDistanceScaling="0.5" type="planar" scaling="1" refractiveIndex="1.33" bumpScale="0.1" shapesObjectMask="4294967295" lightsObjectMask="4294967295"/>
+      <Refractionmap coeff="0" bumpScale="0.1"/>
+      <CustomParameter name="bumpSpeedScale" value="-1 -3.75 0.02 1"/>
+      <CustomParameter name="underwaterFogColor" value="0.05 0.103 0.13 1"/>
+      <CustomParameter name="windScale" value="0.25 0 0 0"/>
+      <CustomParameter name="depthScale" value="0.5 0 0 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="washplant.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="washplant" translation="0 2.6 0" rotation="-0.806 -0 0" nodeId="116">
+        <TransformGroup name="clearAreas" nodeId="117">
+          <TransformGroup name="clearArea1Start" translation="-40.0076 -2.706 -26.1662" rotation="0 -3.95205 0" nodeId="118">
+            <TransformGroup name="clearArea1Width" translation="0 0 65.3455" nodeId="119"/>
+            <TransformGroup name="clearArea1Height" translation="78.0735 0 0" nodeId="120"/>
+          </TransformGroup>
+          <TransformGroup name="clearArea1Start" translation="-38.6288 -2.70585 7.21339" rotation="0 -3.95205 0" nodeId="121">
+            <TransformGroup name="clearArea1Width" translation="0 0 19.5597" nodeId="122"/>
+            <TransformGroup name="clearArea1Height" translation="35.2435 0 0" nodeId="123"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="levelAreas" nodeId="124">
+          <TransformGroup name="levelArea1Start" translation="-7.94603 -2.9 -23.6494" rotation="0 -3.20974 0" nodeId="125">
+            <TransformGroup name="levelArea1Width" translation="0 0 59.2017" nodeId="126"/>
+            <TransformGroup name="levelArea1Height" translation="44.9998 0 0" nodeId="127"/>
+          </TransformGroup>
+          <TransformGroup name="levelArea2Start" translation="-35.3741 -2.9 8.83275" rotation="0 -5.9568 0" nodeId="128">
+            <TransformGroup name="levelArea2Width" translation="-10.4356 0 26.85" nodeId="129"/>
+            <TransformGroup name="levelArea2Height" translation="22.0974 0.209128 2.68408" rotation="9.70085e-07 8.0627 1.91996e-07" nodeId="130"/>
+          </TransformGroup>
+          <TransformGroup name="levelArea2Start" translation="-30.2345 -6.29922 -10.5986" rotation="0 -5.60332 0" nodeId="131">
+            <TransformGroup name="levelArea2Width" translation="-0.00139952 -0.217525 20.1322" rotation="-180 89.2688 180" nodeId="132"/>
+            <TransformGroup name="levelArea2Height" translation="21.8565 2.66699 0" nodeId="133"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="indoorAreas" nodeId="134">
+          <TransformGroup name="indoorArea1Start" translation="-12.7915 -2.706 -13.2494" nodeId="135">
+            <TransformGroup name="indoorArea1Width" translation="0 0 40.4464" nodeId="136"/>
+            <TransformGroup name="indoorArea1Height" translation="41.7553 0 -5.68434e-16" nodeId="137"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape shapeId="1" name="infoTrigger" translation="-3.75159 -1.53925 8.53323" visibility="false" static="true" trigger="true" collisionMask="1048576" nodeId="138" materialIds="20" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="tipOcclusionUpdateAreas" translation="0 2.27374e-15 0" nodeId="139">
+          <TransformGroup name="tipOcclusionUpdateArea1Start" translation="-19.8813 -6.82121e-15 -15.6692" nodeId="140">
+            <TransformGroup name="tipOcclusionUpdateArea1End" translation="46.0791 -6.82121e-15 47.9464" nodeId="141"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="collisions" nodeId="142">
+          <Shape shapeId="2" name="tipCol" translation="24.882 0 -9.11605" visibility="false" static="true" collisionMask="524288" density="0.0001" nodeId="143" materialIds="20" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="effects" nodeId="144">
+          <TransformGroup name="effect1" translation="-3.796 8.24371 -8.16682" nodeId="145"/>
+          <TransformGroup name="effect2" translation="-3.79578 6.79267 -8.16682" nodeId="146"/>
+          <TransformGroup name="effect3" translation="-6.5112 9.38644 7.98433" nodeId="147"/>
+        </TransformGroup>
+        <TransformGroup name="sellingStation" nodeId="148">
+          <Shape shapeId="3" name="unloadTrigger" translation="24.9791 -0.573 -7.4494" static="true" trigger="true" collisionMask="1073741824" nodeId="149" materialIds="20" castsShadows="true" receiveShadows="true" nonRenderable="true">
+            <TransformGroup name="grainGateLinkNode" rotation="0 90 0" nodeId="150"/>
+            <TransformGroup name="unloadTriggerMarker" translation="0.117226 0.875922 0.098" static="true" collisionMask="1073742079" nodeId="151"/>
+          </Shape>
+          <TransformGroup name="teleportNode" translation="2.83312 0 22.3569" nodeId="152"/>
+          <TransformGroup name="aiNode" translation="24.9885 0 -8.58825" rotation="0 180 0" nodeId="153"/>
+        </TransformGroup>
+        <TransformGroup name="productionPoint" translation="-9.77615 0.676707 -7.71795" scale="1.48102 1 1.33713" nodeId="154">
+          <Shape shapeId="4" name="playerTrigger" translation="4.47525 -1.42585 11.5041" scale="1.65902 1 1.59706" static="true" trigger="true" collisionMask="3145728" clipDistance="600" nodeId="155" materialIds="20" castsShadows="true" receiveShadows="true" nonRenderable="true">
+            <TransformGroup name="playerTriggerMarker" translation="0.676912 0.813603 0.612176" nodeId="156"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="palletSpawner" translation="-20 0 0" nodeId="157">
+          <TransformGroup name="spawnSpace1start" translation="-13.754 -1.81351 16.6444" nodeId="158">
+            <TransformGroup name="spawnSpace1end" translation="11.7466 0 2.27374e-15" nodeId="159"/>
+          </TransformGroup>
+          <TransformGroup name="spawnSpace2start" translation="-13.754 -1.81351 18.2957" nodeId="160">
+            <TransformGroup name="spawnSpace2end" translation="11.7466 0 2.27374e-15" nodeId="161"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="warningStripes" translation="-20 0 0" nodeId="162">
+          <Shape shapeId="5" name="warningStripes_palletSpawnArea" translation="-8.49673 -1.831 17.4302" clipDistance="300" nodeId="163" materialIds="50" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="loadingStation" translation="-12.015 -2.607 30.8679" rotation="-1.01143e-06 -28.6391 5.02361e-07" nodeId="164">
+          <Shape shapeId="6" name="loadTrigger" translation="-3.68367 3.623 -10.4138" rotation="9.47783e-13 24.1085 -3.54722e-12" static="true" trigger="true" collisionMask="1073741824" nodeId="165" materialIds="20" castsShadows="true" receiveShadows="true" nonRenderable="true">
+            <TransformGroup name="dischargeNode" translation="0 3.42266 0" nodeId="166"/>
+          </Shape>
+          <TransformGroup name="loadTriggerMarker" translation="-4.00594 5.23006 -10.3998" nodeId="167"/>
+          <TransformGroup name="loadingStationAINode" translation="-3.7776 4.92617 -10.2683" rotation="0 -66.7309 0" nodeId="168"/>
+          <Shape shapeId="7" name="tailingsFence" translation="-4.182 -10 -10.0571" rotation="0 25 0" static="true" clipDistance="300" nodeId="169" materialIds="20" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="8" name="tailingsHill" clipDistance="200" nodeId="170" materialIds="45" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="washplant" translation="0.0041127 -2.7 -6.044" rotation="0 86.325 -3.17313e-05" nodeId="171">
+          <TransformGroup name="goldWashPlant" translation="-87.132 -2.67369e-05 7.59125" rotation="180 87.5 -180" static="true" clipDistance="300" nodeId="172">
+            <TransformGroup name="texturas" rotation="-180 69.5382 -180" nodeId="173"/>
+            <TransformGroup name="StorageSilos" rotation="0 -84.7273 0" clipDistance="400" nodeId="174">
+              <TransformGroup name="Cal" rotation="0 -4.6422 0" nodeId="175"/>
+            </TransformGroup>
+            <Shape shapeId="9" name="cracked" translation="-72.3769 2.33239 96.9959" rotation="90 3.1904 1.42226e-07" scale="0.5 0.3 0.3" static="true" trigger="true" clipDistance="300" nodeId="176" materialIds="20" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="10" name="debrisCrusher_cutted" translation="36.6359 2.07996 72.5061" rotation="-180 0 180" static="true" clipDistance="300" nodeId="177" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="bier" translation="10.6506 -1.28468 89.0465" rotation="0 90 0" scale="1.8 2 2.5" static="true" clipDistance="200" nodeId="178" materialIds="4" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="bier" translation="11.4726 -1.285 71.32" rotation="-0 90 0" scale="0.706024 2 2.5" static="true" clipDistance="200" nodeId="179" materialIds="4" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="washPlant" translation="14.47 -10.1394 11.851" rotation="0 90 0" scale="0.8 0.8 0.8" static="true" nodeId="180">
+            <Shape shapeId="12" name="ConveyorBelt" translation="26.109 12.6273 -26.448" scale="1 1 2" static="true" nodeId="181" materialIds="27"/>
+            <Shape shapeId="13" name="ConveyorFrame" translation="26.1094 12.627 -26.448" scale="1 1 2" static="true" nodeId="182" materialIds="33"/>
+            <Shape shapeId="14" name="ConveyorRollers" translation="26.1094 12.6273 -26.448" scale="1 1 2" static="true" nodeId="183" materialIds="28"/>
+            <Shape shapeId="15" name="Frame" translation="26.1094 12.6893 -26.4513" rotation="-0.0577847 -0 0" static="true" nodeId="184" materialIds="33"/>
+            <Shape shapeId="16" name="FrameLogo" translation="26.1094 12.6273 -26.448" static="true" nodeId="185" materialIds="24"/>
+            <Shape shapeId="17" name="ShackerBox" translation="26.1094 12.6273 -26.448" static="true" nodeId="186" materialIds="29"/>
+            <Shape shapeId="18" name="ShackerMotor" translation="26.1094 12.6273 -26.448" static="true" nodeId="187" materialIds="27"/>
+            <Shape shapeId="19" name="ShackerMotorBelt" translation="26.1094 12.6273 -26.448" static="true" nodeId="188" materialIds="30"/>
+            <Shape shapeId="20" name="ShackerScreen" translation="26.1094 12.6273 -26.448" static="true" nodeId="189" materialIds="31"/>
+            <Shape shapeId="21" name="SpreyNozzles" translation="26.1094 12.6273 -26.448" static="true" nodeId="190" materialIds="27"/>
+            <Shape shapeId="22" name="TrommelFrame" translation="26.1094 12.6273 -26.448" static="true" nodeId="191" materialIds="33"/>
+            <Shape shapeId="23" name="TrommelLogo" translation="26.1094 12.6273 -26.448" static="true" nodeId="192" materialIds="24"/>
+            <Shape shapeId="24" name="TrommelMotors" translation="26.1094 12.6273 -26.448" static="true" nodeId="193" materialIds="36"/>
+            <Shape shapeId="25" name="TrommelRollers" translation="26.1088 12.5596 -26.5768" rotation="3.60661 0.0292511 -0.464081" static="true" nodeId="194" materialIds="36"/>
+            <Shape shapeId="26" name="TrommelRing" translation="25.974 15.199 -28.115" nodeId="195" materialIds="35"/>
+            <Shape shapeId="27" name="TrommelPlates" translation="25.99 15.145 -29.1073" nodeId="196" materialIds="34"/>
+            <Shape shapeId="28" name="slueceBox" translation="25.896 12.4595 -23.116" rotation="-50.6558 88.432 -55.2686" static="true" nodeId="197" materialIds="14" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="28" name="slueceBox" translation="25.993 12.3448 -29.2245" rotation="-36.6019 88.7568 -41.2105" static="true" nodeId="198" materialIds="14" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="28" name="slueceBox" translation="26.0923 12.306 -35.1021" rotation="-24.6567 88.9025 -29.2629" static="true" nodeId="199" materialIds="14" castsShadows="true" receiveShadows="true"/>
+            <TransformGroup name="Conveyor1" translation="10.692 12.4916 -15.7769" rotation="-180 -3.59671 180" scale="0.907 0.75 0.5" nodeId="200">
+              <Shape shapeId="29" name="Belt" rotation="90 -0 0" scale="0.154824 0.154824 0.154824" nodeId="201" materialIds="11"/>
+              <Shape shapeId="30" name="Conveyor.001" rotation="90 -0 0" scale="0.155 0.154824 0.155" static="true" nodeId="202" materialIds="12"/>
+              <Shape shapeId="31" name="Rollers" rotation="90 -0 0" scale="0.155 0.154824 0.154824" nodeId="203" materialIds="12"/>
+            </TransformGroup>
+            <Shape shapeId="32" name="SpreyPipe" translation="26.109 12.6273 -26.448" static="true" nodeId="204" materialIds="32"/>
+            <Shape shapeId="28" name="slueceBox" translation="37.2476 11.2918 -34.92" rotation="27.1432 88.7217 16.4122" static="true" nodeId="205" materialIds="14" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="28" name="slueceBox" translation="37.1402 11.342 -29.0238" rotation="-39.5272 88.548 -50.2723" static="true" nodeId="206" materialIds="14" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="28" name="slueceBox" translation="37.0402 11.4574 -22.8951" rotation="-44.5219 88.432 -55.2687" static="true" nodeId="207" materialIds="14" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="sellingStation" translation="10.604 -2 -9.70543" nodeId="208">
+          <Shape shapeId="33" name="unloadTrigger" translation="-11.9121 -0.34447 6.86" scale="1.669 1 1.37916" static="true" trigger="true" collisionMask="1075838976" nodeId="209" materialIds="20" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <TransformGroup name="unloadTriggerMarker" translation="-11.9909 -0.2 8.43989" nodeId="210"/>
+          <TransformGroup name="unloadTriggerAINode" translation="-12.0951 1.36424e-14 8.32215" nodeId="211"/>
+        </TransformGroup>
+        <TransformGroup name="sellingStation" translation="5.72869 -2 -29.9383" visibility="false" nodeId="212">
+          <Shape shapeId="33" name="unloadTrigger" translation="-11.7066 -0.2 8.43989" static="true" trigger="true" collisionMask="1075838976" nodeId="213" materialIds="20" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <TransformGroup name="unloadTriggerMarker" translation="-11.9909 -0.2 8.43989" nodeId="214"/>
+          <TransformGroup name="unloadTriggerAINode" translation="-12.0951 1.36424e-14 8.32215" nodeId="215"/>
+        </TransformGroup>
+        <TransformGroup name="material" nodeId="216">
+          <Shape shapeId="34" name="diesel_generator" translation="-5.76267 -2.706 7.61277" rotation="-180 -89.3259 180" static="true" clipDistance="300" nodeId="217" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="effects" translation="-0.957782 -5.02542 0" rotation="0 -0 169.196" nodeId="218">
+          <Shape shapeId="35" name="effectMesh" translation="8.89373 -2.96254 -2.24641" rotation="90 0 -100" scale="1 1 0.4" clipDistance="100" nodeId="219" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.16029 -2.55084 3.03255" rotation="90 0 -100" scale="1 1 0.4" clipDistance="100" nodeId="220" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.05041 -2.91578 -1.65458" rotation="90 -0 100" scale="1 1 0.4" clipDistance="100" nodeId="221" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.33079 -2.46912 4.00257" rotation="90 -0 100" scale="1 1 0.4" clipDistance="100" nodeId="222" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.31141 -2.32392 5.97225" rotation="90 0 -100" scale="1 1 0.4" clipDistance="100" nodeId="223" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.45228 -2.27225 6.43348" rotation="90 -0 100" scale="1 1 0.4" clipDistance="100" nodeId="224" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.14106 -2.77986 0.25159" rotation="90 -0 100" scale="1 1 0.4" clipDistance="100" nodeId="225" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.00595 -2.82168 -0.163244" rotation="90 0 -100" scale="1 1 0.4" clipDistance="100" nodeId="226" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="8.78114 -3.14373 -4.49924" rotation="90 0 -100" scale="1 1 0.4" clipDistance="100" nodeId="227" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="8.88062 -3.11632 -4.86848" rotation="90 -0 100" scale="1 1 0.4" clipDistance="100" nodeId="228" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.7106 -7.97919 -6.08597" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="229" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.494 -7.83539 -6.1233" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="230" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="8.86676 -8.14478 -6.02386" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="231" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="8.92264 -8.10667 -5.07096" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="232" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.76508 -7.95324 -5.12736" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="233" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.5454 -7.7892 -5.17393" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="234" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="8.9823 -8.09009 -4.10915" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="235" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.82477 -7.93056 -4.17223" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="236" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.6077 -7.77531 -4.21371" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="237" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.6687 -7.76367 -3.26011" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="238" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.884 -7.91342 -3.21934" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="239" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.04211 -8.07408 -3.15509" rotation="90.1107 -2.76959 -171.484" scale="1 1 0.4" clipDistance="100" nodeId="240" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.5244 -4.44861 -5.91956" rotation="121.797 -2.88149e-06 136.876" scale="2.93374 -8.57294 0.564788" clipDistance="100" nodeId="241" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="11.1906 -6.05721 -4.86848" rotation="90 -2.93485e-06 136.876" scale="2.61183 -8.71967 0.778999" clipDistance="100" nodeId="242" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.9062 -6.36082 -7.85935" rotation="111.24 -62.7 139.55" scale="2.61183 -8.71967 0.778999" clipDistance="100" nodeId="243" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="11.3701 -7.72049 -6.12216" rotation="89.1848 21.586 141.474" scale="6.86502 -10.296 2.56658" clipDistance="100" nodeId="244" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="11.6907 -7.32598 -1.73214" rotation="88.8269 20.5597 148.033" scale="5.37194 -10.296 2.30536" clipDistance="100" nodeId="245" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="11.4397 -8.07694 -4.14144" rotation="88.8269 20.5597 148.033" scale="5.37194 -10.296 2.30536" clipDistance="100" nodeId="246" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.9947 -5.94472 -4.82133" rotation="111.24 -62.7 139.55" scale="2.61183 -8.71967 0.778999" clipDistance="100" nodeId="247" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.0745 -5.16017 -2.47843" rotation="111.24 -62.7 139.55" scale="2.61183 -8.71967 0.778999" clipDistance="100" nodeId="248" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.43457 -4.61461 -0.849198" rotation="111.24 -62.7 139.55" scale="2.61183 -8.71967 0.778999" clipDistance="100" nodeId="249" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.4764 -5.99434 -6.76493" rotation="111.24 -62.7 139.55" scale="4.72098 -7.68862 2.47717" clipDistance="100" nodeId="250" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.91902 -5.51915 -5.34588" rotation="111.24 -62.7 139.55" scale="4.72098 -7.68862 2.08944" clipDistance="100" nodeId="251" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="8.67251 -4.14576 -3.56925" rotation="82.92 -62.7 139.55" scale="4.72098 -7.68862 2.08944" clipDistance="100" nodeId="252" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.2406 -5.91233 -2.36181" rotation="82.92 -62.7 139.55" scale="4.72098 -7.68862 2.08944" clipDistance="100" nodeId="253" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="9.31931 -4.66218 -5.63973" rotation="82.92 -62.7 139.55" scale="4.72098 -7.68862 2.45223" clipDistance="100" nodeId="254" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="35" name="effectMesh" translation="10.046 -4.2253 -4.37002" rotation="82.92 -62.7 139.55" scale="4.72098 -7.68862 2.45223" clipDistance="100" nodeId="255" materialIds="15" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="animations" translation="0 -2.6 2.61147" nodeId="256">
+          <Shape shapeId="36" name="washerplane" translation="-9.37686 0.910833 -2.48118" rotation="0 -3.67168 0" scale="0.6 1 0.65" nodeId="257" materialIds="23"/>
+          <Shape shapeId="36" name="washerplane" translation="-9.58971 0.887622 0.978075" rotation="0 -3.67168 0" scale="0.54 1 0.65" nodeId="258" materialIds="23"/>
+          <Shape shapeId="36" name="washerplane" translation="-9.80276 0.8742 4.16215" rotation="0.164288 -3.08317 -0.0105214" scale="0.54 1 0.65" nodeId="259" materialIds="23"/>
+          <Shape shapeId="36" name="washerplane" translation="-9.15561 0.910833 -5.9289" rotation="0 -3.67168 0" scale="0.6 1 0.7" nodeId="260" materialIds="23"/>
+          <Shape shapeId="37" name="potato_little" translation="-9.904 -0.202007 6.19237" rotation="87.4915 18.2203 88.9096" scale="0.4 1 1.3" nodeId="261" materialIds="23"/>
+          <Shape shapeId="38" name="peeler_plane" translation="-8.9504 6.5344 -8.34894" rotation="7.08573 -2.69137 0.116671" scale="0.9 1 1.3" nodeId="262" materialIds="41"/>
+          <Shape shapeId="39" name="potatoWaste" translation="-13.6626 -0.844023 4.26001" rotation="0.834853 -4.68284 4.42507" scale="1.7 1 3.87" nodeId="263" materialIds="23"/>
+          <Shape shapeId="39" name="potatoWaste" translation="-13.2815 -0.775452 -0.443385" rotation="0.834853 -4.68284 4.42507" scale="1.7 1 3.87" nodeId="264" materialIds="23"/>
+          <Shape shapeId="39" name="potatoWaste" translation="-12.8878 -0.699814 -5.30664" rotation="0.834853 -4.68284 4.42507" scale="1.7 1 3.87" nodeId="265" materialIds="23"/>
+          <Shape shapeId="40" name="potato_peeled.001" translation="-10.4226 4.96468 14.1723" rotation="1.34331 -2.80797 -0.0274496" scale="0.69 1 1.1" nodeId="266" materialIds="41"/>
+          <Shape shapeId="41" name="frozen1" translation="18.2035 0.772218 -9.45475" rotation="44.5934 89.4111 29.5527" scale="0.7 1 1" nodeId="267" materialIds="18"/>
+          <Shape shapeId="41" name="frozen1" translation="22.2766 -1.48235 -9.41943" rotation="44.5934 89.4111 22.8363" scale="0.7 1 0.7" nodeId="268" materialIds="18"/>
+          <Shape shapeId="41" name="frozen1" translation="-1.49473 6.34275 -9.59823" rotation="44.5934 89.4111 35.8551" scale="0.7 1 0.5" nodeId="269" materialIds="18"/>
+          <Shape shapeId="40" name="potato_peeled.001" translation="-10.2296 5.00425 11.0593" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="270" materialIds="41"/>
+          <Shape shapeId="40" name="potato_peeled.001" translation="-10.0236 5.00425 7.9217" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="271" materialIds="41"/>
+          <Shape shapeId="40" name="potato_peeled.001" translation="-9.82353 5.00425 4.99689" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="272" materialIds="41"/>
+          <Shape shapeId="40" name="potato_peeled.001" translation="-9.61689 5.00425 1.90259" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="273" materialIds="41"/>
+          <Shape shapeId="40" name="potato_peeled.001" translation="-9.41987 5.00425 -1.07473" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="274" materialIds="41"/>
+          <Shape shapeId="40" name="potato_peeled.001" translation="-9.2175 5.00425 -4.18959" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="275" materialIds="41"/>
+          <Shape shapeId="41" name="frozen1" translation="9.51995 3.08677 -9.50761" rotation="44.5934 89.4111 29.5527" scale="0.7 1 1" nodeId="276" materialIds="18"/>
+          <Shape shapeId="40" name="potato_peeled.001" translation="-9.2175 6.04824 -4.67372" rotation="13.6479 -3.6909 -0.842092" scale="1 1 0.7" nodeId="277" materialIds="41"/>
+          <Shape shapeId="40" name="potato_peeled.001" translation="-10.1214 6.02246 -4.67372" rotation="13.1813 26.1431 7.63298" scale="1 1 0.7" nodeId="278" materialIds="41"/>
+          <Shape shapeId="40" name="potato_peeled.001" translation="-8.36403 6.08592 -4.53446" rotation="14.1151 -31.8092 -0.988888" scale="1 1 0.7" nodeId="279" materialIds="41"/>
+          <Shape shapeId="41" name="frozen1" translation="-7.04224 8.87748 -9.6299" rotation="-26.8316 89.4111 35.8551" scale="0.7 1 0.2" nodeId="280" materialIds="18"/>
+          <Shape shapeId="39" name="potatoWaste" translation="-21.358 -1.83959 -6.01267" rotation="0.286471 -4.7479 11.0884" scale="1.7 1 3.87" nodeId="281" materialIds="23"/>
+          <Shape shapeId="39" name="potatoWaste" translation="-21.7497 -1.941 -1.14927" rotation="0.286471 -4.7479 11.0884" scale="1.7 1 3.87" nodeId="282" materialIds="23"/>
+          <Shape shapeId="39" name="potatoWaste" translation="-22.1448 -1.9494 3.53877" rotation="-1.3085 -4.74791 11.0884" scale="1.7 1 3.87" nodeId="283" materialIds="23"/>
+        </TransformGroup>
+        <TransformGroup name="effectNodes" translation="0 1.619 -4.801" clipDistance="300" nodeId="284">
+          <Shape shapeId="42" name="effectSmoke1" translation="-8.48175 2.88558 -2.90594" visibility="false" clipDistance="100" nodeId="285" materialIds="20" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="42" name="effectSmoke2" translation="-9.22865 1.51744 0.771094" scale="1 1 1.37107" visibility="false" clipDistance="100" nodeId="286" materialIds="20" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="43" name="effect12" translation="7.64189e-07 1.369 11.895" scale="0.237 1.672 0.949385" visibility="false" clipDistance="100" nodeId="287" materialIds="20" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="44" name="effect12" translation="-0.0142503 2.07792 2.78616" scale="0.536547 1.672 0.949385" visibility="false" clipDistance="100" nodeId="288" materialIds="20" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="waterplane" translation="-21.4068 13.5271 0.90125" scale="1.34447 1.8966 2.22706" nodeId="289">
+        <Shape shapeId="45" name="waterplane_vis" translation="-0.898601 -7.91606 0" scale="2.03567 1 1.33852" nodeId="290" materialIds="51" receiveShadows="true">
+          <Shape shapeId="46" name="swimCol" translation="0 -1.2 0" rotation="-2.25427 -0 0" static="true" nodeId="291" materialIds="21" nonRenderable="true"/>
+        </Shape>
+      </TransformGroup>
+      <Shape shapeId="47" name="gastank" translation="-3.20363 -0.116921 -5.97602" rotation="-180 0 -180" scale="1.43012 1.27822 1.01454" static="true" nodeId="292" materialIds="39,5,44,38" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="48" name="motorexOilBarrel" translation="16.2495 0 -4.7348" static="true" density="0.0001" nodeId="293" materialIds="21" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="49" name="vis" clipDistance="150" nodeId="294" materialIds="42" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="50" name="decal" clipDistance="65" nodeId="295" materialIds="40" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+      </Shape>
+      <TransformGroup name="hose" translation="0.126638 -0.335254 -1.03978" nodeId="296">
+        <TransformGroup name="hoses" translation="-0.136051 1.50195 -0.346178" nodeId="297">
+          <Shape shapeId="51" name="hoseBack_Vis" translation="-9.12365 -2.30436 -0.448346" rotation="-164.733 -83.5013 161.94" scale="1 1 1.40709" clipDistance="300" nodeId="298" materialIds="25" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="51" name="hoseBack_Vis" translation="-6.54032 0.620584 -0.477858" rotation="174.121 86.8083 -5.90312" clipDistance="300" nodeId="299" materialIds="25" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="joints" translation="0.351452 1.49604 0.115931" nodeId="300">
+          <Shape shapeId="52" name="elbowJoint" translation="-4.83784 -0.944451 -0.6894" rotation="-180 3.12349 6.2631e-05" clipDistance="100" nodeId="301" materialIds="25" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="transform" translation="19.8856 0 14.5562" nodeId="302">
+        <Shape shapeId="53" name="barriere betons " translation="-8.44142 0.037646 -2.17099" rotation="0 68.8213 0" static="true" clipDistance="120" nodeId="303" materialIds="37" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="53" name="barriere betons " translation="-17.1181 0.037646 -2.18319" rotation="-180 72.7617 -180" static="true" clipDistance="120" nodeId="304" materialIds="37" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="54" name="IKR" translation="-6.89479 0.217913 -5.00871" rotation="0.861773 -0.0719632 0.00520998" scale="1.1 1.2 1" static="true" clipDistance="1000" nodeId="305" materialIds="22" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="55" name="calendrier" translation="0.498 0.931336 1.99186" rotation="180 180 180" scale="0.615 0.338685 0.338685" clipDistance="15" nodeId="306" materialIds="16" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="56" name="etagere_basse" translation="-0.948 0.00485262 -1.67785" rotation="180 0 -180" scale="1 0.84214 1" static="true" clipDistance="80" nodeId="307" materialIds="16" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="57" name="flowerpot_vis" translation="-0.447 1.18387 -1.69371" scale="1.22157 0.678941 1.22157" clipDistance="50" nodeId="308" materialIds="17" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="58" name="radiator" translation="1.899 0.00486755 -0.172061" rotation="-0 -90 0" scale="4 3 2" static="true" clipDistance="50" nodeId="309" materialIds="43" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="59" name="banc2" translation="0 0.422463 1.21223" scale="0.238265 0.5 0.295759" clipDistance="150" nodeId="310" materialIds="8,9,10" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="60" name="3" translation="1.61207 0.0509096 2.4469" rotation="-180 -34.7365 -180" scale="1 0.89 1" clipDistance="250" nodeId="311" materialIds="26" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="61" name="broom" translation="-2.95654 0.294027 1.98022" rotation="-167.799 -90 -180" static="true" density="1.25" clipDistance="75" nodeId="312" materialIds="19" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="62" name="ss_main" translation="0.409729 0.770706 1.7627" rotation="90 -0 180" scale="0.49 0.790348 2" clipDistance="50" nodeId="313" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="53" name="barriere betons " translation="-44.5148 0.037646 0.548476" rotation="-1.35897e-06 87.0864 -1.35715e-06" static="true" clipDistance="120" nodeId="314" materialIds="37" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="53" name="barriere betons " translation="-48.0794 0.037646 0.367049" rotation="-1.35897e-06 87.0864 -1.35715e-06" static="true" clipDistance="120" nodeId="315" materialIds="37" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="53" name="barriere betons " translation="-41.0952 0.037646 0.72252" rotation="-1.35897e-06 87.0864 -1.35715e-06" static="true" clipDistance="120" nodeId="316" materialIds="37" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="53" name="barriere betons " translation="-51.4617 0.037646 0.194902" rotation="-1.35897e-06 87.0864 -1.35715e-06" static="true" clipDistance="120" nodeId="317" materialIds="37" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="53" name="barriere betons " translation="-54.7638 0.037646 0.0268395" rotation="-1.35897e-06 87.0864 -1.35715e-06" static="true" clipDistance="120" nodeId="318" materialIds="37" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <Shape shapeId="63" name="diesel" translation="-3.01935 1.54814 -4.12776" rotation="-90.0001 89.1271 -175.539" scale="1.94495 1 0.372224" nodeId="319" materialIds="47" distanceBlending="false"/>
+      <Shape shapeId="63" name="tailings" translation="-9.65644 4.59413 16.4138" rotation="72.155 86.651 -18.4028" scale="2.81712 1 0.652152" nodeId="320" materialIds="49" distanceBlending="false"/>
+      <Shape shapeId="63" name="stone" translation="25.9591 2.24733 -5.71937" rotation="87.4196 -1.36459 0.176784" scale="1.98426 1 0.814024" nodeId="321" materialIds="48" distanceBlending="false"/>
+      <Shape shapeId="63" name="concentrate" translation="-31.5845 1.02787 14.8571" rotation="87.0102 -2.9482 0.0303474" scale="2.86829 1 0.60101" nodeId="322" materialIds="46" distanceBlending="false"/>
+      <TransformGroup name="floodLight4" translation="-4.55181 -1.12015e-05 0.721748" rotation="-180 -85.567 -180" clipDistance="250" nodeId="668">
+        <TransformGroup name="lights" nodeId="669">
+          <TransformGroup name="soundLinkNode" translation="0 23.858 -0.321513" nodeId="670"/>
+          <Shape shapeId="64" name="emissiveShape" clipDistance="250" nodeId="671" materialIds="662" castsShadows="true" receiveShadows="true"/>
+          <TransformGroup name="lightHigh" nodeId="672">
+            <Light name="spotLight1" translation="1.13687e-15 24.4685 1.43821" rotation="-144.926 15.1781 10.6153" clipDistance="100" nodeId="673" type="spot" color="0.873494 0.873494 0.873494" emitDiffuse="true" emitSpecular="true" range="90" coneAngle="150" dropOff="4"/>
+            <Light name="spotLight2" translation="1.13687e-15 24.4685 -2.03632" rotation="33.286 -2.68075 -179.841" clipDistance="100" nodeId="674" type="spot" color="0.873494 0.873494 0.873494" emitDiffuse="true" emitSpecular="true" range="70" coneAngle="179" dropOff="4"/>
+          </TransformGroup>
+          <TransformGroup name="lightLow" nodeId="675">
+            <Light name="spotLight1" translation="1.13687e-15 24.4685 1.43821" rotation="-155 0 0" clipDistance="100" nodeId="676" type="spot" color="0.873494 0.873494 0.873494" emitDiffuse="true" emitSpecular="true" range="25" coneAngle="150" dropOff="2"/>
+            <Light name="spotLight2" translation="1.13687e-15 24.4685 -2.03632" rotation="25 0 180" clipDistance="100" nodeId="677" type="spot" color="0.873494 0.873494 0.873494" emitDiffuse="true" emitSpecular="true" range="25" coneAngle="150" dropOff="2"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="clearAreas" nodeId="678">
+          <TransformGroup name="clearArea1Start" translation="-0.540487 0 -0.539179" nodeId="679">
+            <TransformGroup name="clearArea1Width" translation="1.06583 0 0" nodeId="680"/>
+            <TransformGroup name="clearArea1Height" translation="0 0 1.06876" nodeId="681"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="levelAreas" nodeId="682">
+          <TransformGroup name="levelArea1Start" translation="-0.540487 0 -0.539179" nodeId="683">
+            <TransformGroup name="levelArea1Width" translation="1.06583 0 0" nodeId="684"/>
+            <TransformGroup name="levelArea1Height" translation="0 0 1.06876" nodeId="685"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="indoorAreas" nodeId="686">
+          <TransformGroup name="indoorArea1Start" translation="-0.540487 0 -0.539179" nodeId="687">
+            <TransformGroup name="indoorArea1Width" translation="1.06583 0 0" nodeId="688"/>
+            <TransformGroup name="indoorArea1Height" translation="0 0 1.06876" nodeId="689"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="tipCollision" nodeId="690">
+          <Shape shapeId="65" name="collision" visibility="false" static="true" collisionMask="524288" nodeId="691" materialIds="616" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="tipOcclusionUpdateAreas" nodeId="692">
+          <TransformGroup name="tipOcclusionUpdateArea1Start" translation="-0.66588 0 -0.663897" nodeId="693">
+            <TransformGroup name="tipOcclusionUpdateArea1End" translation="1.34298 0 1.34439" nodeId="694"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="testAreas" nodeId="695">
+          <TransformGroup name="testArea1Start" translation="-0.6 0 -0.6" nodeId="696">
+            <TransformGroup name="testArea1End" translation="1.2 23.0928 1.2" nodeId="697"/>
+          </TransformGroup>
+          <TransformGroup name="testArea2Start" translation="-1.38522 22.933 -2.05731" nodeId="698">
+            <TransformGroup name="testArea2End" translation="2.77727 3.88005 3.58218" nodeId="699"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="visuals" nodeId="700">
+          <Shape shapeId="66" name="floodLighting04Vis" nodeId="701" materialIds="661" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="collisions" nodeId="702">
+          <Shape shapeId="67" name="collision" translation="0 12.9351 -0.267285" visibility="false" static="true" nodeId="703" materialIds="616" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+      </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="174">
+      <Attribute name="mapPositionIndex" type="string" value="0|3"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

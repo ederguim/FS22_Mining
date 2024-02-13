@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="Ibeam" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>$l10n_storeItem_steelBeam</name>
+        <image>scripts/fillTypes/huds/hud_fill_steelBeam.png</image>
+        <functions>
+            <function>$l10n_function_customPallet</function>
+        </functions>
+        <category>SCRAP</category>
+		<price>2000</price>
+        <brand>SCRAP</brand>
+        <showInStore>true</showInStore>
+        <canBeSold>false</canBeSold>
+        <financeCategory>OTHER</financeCategory>
+        <vertexBufferMemoryUsage>75264</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>14848</indexBufferMemoryUsage>
+        <textureMemoryUsage>2031616</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_ibeam</typeDesc>
+        <filename>scripts/fillTypes/pallets/steelPallet/iBeamPallet.i3d</filename>
+        <size width="1.4" length="1" height="1.1" />
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.2 0" solverIterationCount="10" mass="500"/>
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false" />
+    </base>
+
+
+    <tensionBelts>
+        <tensionBeltsConfigurations>
+            <tensionBeltsConfiguration>
+                <tensionBelts linkNode="tensionBelts" jointNode="0>" width="0.02" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="0.1" defaultOffsetSide="0.1" defaultHeight="2" activationTrigger="beltActivationTrigger">
+                    <tensionBelt startNode="tensionBeltStart1" endNode="tensionBeltEnd1" />
+
+                    <sounds>
+                        <addBelt template="beltOpen" />
+                        <removeBelt template="beltClose" />
+                    </sounds>
+                </tensionBelts>
+            </tensionBeltsConfiguration>
+        </tensionBeltsConfigurations>
+    </tensionBelts>	
+     
+     
+
+
+    <animations>
+        <animation name="fillAnimation">
+            <part node="Ibeam_Steelglow" startTime="0.000" endTime="0.990" visibility="true" />
+            <part node="Ibeam_Steel" startTime="0.000" endTime="0.990" visibility="false" />
+            <part node="Ibeam_Steelglow" startTime="0.991" endTime="1.000" visibility="false" />
+            <part node="Ibeam_Steel" startTime="0.991" endTime="1.000" visibility="true" />
+
+            <sound template="dischargeLoop" startTime="0.001" direction="-1" pitchScale="0.8" />
+            <sound template="clackVar6" startTime="0.001"  pitchScale="0.6" />
+
+        </animation>
+    </animations>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="STEEL_IBS" capacity="1000" startFillType="STEEL_IBS" startFillLevel="1000" ignoreFillLimit="true">
+                        <fillLevelAnimation name="fillAnimation" resetOnEmpty="true" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="dischargeNode" emptySpeed="5000" fillUnitIndex="1" maxDistance="1" canStartDischargeAutomatically="true" playSound="true"/>
+            <dischargeStateSound template="metalClose01"/>
+ 
+ </dischargeable>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="Ibeam_Steelglow"/>
+            <meshNode node="Ibeam_Steel"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="ibeamPallet_component1" node="0>" />
+        <i3dMapping id="dynamicMountTrigger" node="0>1" />
+        <i3dMapping id="dischargeNode" node="0>2" />
+
+		
+        <i3dMapping id="tensionBelts" node="0>6" />
+        <i3dMapping id="beltActivationTrigger" node="0>6|0" />
+        <i3dMapping id="tensionBeltStart1" node="0>6|1" />
+        <i3dMapping id="tensionBeltEnd1" node="0>6|1|0" />	
+		
+
+        <i3dMapping id="Ibeam_Steelglow" node="0>4|0" />
+        <i3dMapping id="Ibeam_Steel" node="0>4|1" />
+
+
+    </i3dMappings>
+</vehicle>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="6" filename="/textures/ballast_diffuse.dds"/>
+    <File fileId="1" filename="textures/potatoWaste_diffuse.dds"/>
+    <File fileId="7" filename="textures/terre.dds"/>
+    <File fileId="8" filename="$data/shaders/uvScrollShader.xml"/>
+    <File fileId="2" filename="$data/shaders/vehicleShader.xml"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="frozen" materialId="18" alphaBlending="true" customShaderId="8">
+      <Texture fileId="7"/>
+      <CustomParameter name="offsetUV" value="0 0 0 1"/>
+    </Material>
+    <Material name="little_potato" materialId="23" alphaBlending="true" customShaderId="2" customShaderVariation="uvScroll">
+      <Texture fileId="1"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="offsetUV" value="0 0 0 1"/>
+    </Material>
+    <Material name="peeled" materialId="41" alphaBlending="true" customShaderId="2" customShaderVariation="uvScroll">
+      <Texture fileId="6"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="offsetUV" value="0 0 0 1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="animations.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="animations" translation="0 -2.6 2.61147" nodeId="251">
+        <Shape shapeId="1" name="washerplane" translation="-9.37686 0.910833 -2.48118" rotation="0 -3.67168 0" scale="0.6 1 0.65" nodeId="252" materialIds="23"/>
+        <Shape shapeId="1" name="washerplane" translation="-9.58971 0.887622 0.978075" rotation="0 -3.67168 0" scale="0.54 1 0.65" nodeId="253" materialIds="23"/>
+        <Shape shapeId="1" name="washerplane" translation="-9.80276 0.8742 4.16215" rotation="0.164288 -3.08317 -0.0105214" scale="0.54 1 0.65" nodeId="254" materialIds="23"/>
+        <Shape shapeId="1" name="washerplane" translation="-9.15561 0.910833 -5.9289" rotation="0 -3.67168 0" scale="0.6 1 0.7" nodeId="255" materialIds="23"/>
+        <Shape shapeId="2" name="potato_little" translation="-9.904 -0.202007 6.19237" rotation="87.4915 18.2203 88.9096" scale="0.4 1 1.3" nodeId="256" materialIds="23"/>
+        <Shape shapeId="3" name="peeler_plane" translation="-8.9504 6.5344 -8.34894" rotation="7.08573 -2.69137 0.116671" scale="0.9 1 1.3" nodeId="257" materialIds="41"/>
+        <Shape shapeId="4" name="potatoWaste" translation="-13.6626 -0.844023 4.26001" rotation="0.834853 -4.68284 4.42507" scale="1.7 1 3.87" nodeId="258" materialIds="23"/>
+        <Shape shapeId="4" name="potatoWaste" translation="-13.2815 -0.775452 -0.443385" rotation="0.834853 -4.68284 4.42507" scale="1.7 1 3.87" nodeId="259" materialIds="23"/>
+        <Shape shapeId="4" name="potatoWaste" translation="-12.8878 -0.699814 -5.30664" rotation="0.834853 -4.68284 4.42507" scale="1.7 1 3.87" nodeId="260" materialIds="23"/>
+        <Shape shapeId="5" name="potato_peeled.001" translation="-10.4226 4.96468 14.1723" rotation="1.34331 -2.80797 -0.0274496" scale="0.69 1 1.1" nodeId="261" materialIds="41"/>
+        <Shape shapeId="6" name="frozen1" translation="18.2035 0.772218 -9.45475" rotation="44.5934 89.4111 29.5527" scale="0.7 1 1" nodeId="262" materialIds="18"/>
+        <Shape shapeId="6" name="frozen1" translation="22.2766 -1.48235 -9.41943" rotation="44.5934 89.4111 22.8363" scale="0.7 1 0.7" nodeId="263" materialIds="18"/>
+        <Shape shapeId="6" name="frozen1" translation="-1.49473 6.34275 -9.59823" rotation="44.5934 89.4111 35.8551" scale="0.7 1 0.5" nodeId="264" materialIds="18"/>
+        <Shape shapeId="5" name="potato_peeled.001" translation="-10.2296 5.00425 11.0593" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="265" materialIds="41"/>
+        <Shape shapeId="5" name="potato_peeled.001" translation="-10.0236 5.00425 7.9217" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="266" materialIds="41"/>
+        <Shape shapeId="5" name="potato_peeled.001" translation="-9.82353 5.00425 4.99689" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="267" materialIds="41"/>
+        <Shape shapeId="5" name="potato_peeled.001" translation="-9.61689 5.00425 1.90259" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="268" materialIds="41"/>
+        <Shape shapeId="5" name="potato_peeled.001" translation="-9.41987 5.00425 -1.07473" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="269" materialIds="41"/>
+        <Shape shapeId="5" name="potato_peeled.001" translation="-9.2175 5.00425 -4.18959" rotation="0.792621 -3.78552 -0.000471246" scale="0.69 1 1" nodeId="270" materialIds="41"/>
+        <Shape shapeId="6" name="frozen1" translation="9.51995 3.08677 -9.50761" rotation="44.5934 89.4111 29.5527" scale="0.7 1 1" nodeId="271" materialIds="18"/>
+        <Shape shapeId="5" name="potato_peeled.001" translation="-9.2175 6.04824 -4.67372" rotation="13.6479 -3.6909 -0.842092" scale="1 1 0.7" nodeId="272" materialIds="41"/>
+        <Shape shapeId="5" name="potato_peeled.001" translation="-10.1214 6.02246 -4.67372" rotation="13.1813 26.1431 7.63298" scale="1 1 0.7" nodeId="273" materialIds="41"/>
+        <Shape shapeId="5" name="potato_peeled.001" translation="-8.36403 6.08592 -4.53446" rotation="14.1151 -31.8092 -0.988888" scale="1 1 0.7" nodeId="274" materialIds="41"/>
+        <Shape shapeId="6" name="frozen1" translation="-7.04224 8.87748 -9.6299" rotation="-26.8316 89.4111 35.8551" scale="0.7 1 0.2" nodeId="275" materialIds="18"/>
+        <Shape shapeId="4" name="potatoWaste" translation="-21.358 -1.83959 -6.01267" rotation="0.286471 -4.7479 11.0884" scale="1.7 1 3.87" nodeId="276" materialIds="23"/>
+        <Shape shapeId="4" name="potatoWaste" translation="-21.7497 -1.941 -1.14927" rotation="0.286471 -4.7479 11.0884" scale="1.7 1 3.87" nodeId="277" materialIds="23"/>
+        <Shape shapeId="4" name="potatoWaste" translation="-22.1448 -1.9494 3.53877" rotation="-1.3085 -4.74791 11.0884" scale="1.7 1 3.87" nodeId="278" materialIds="23"/>
+      </TransformGroup>
+  </Scene>
+
+</i3D>

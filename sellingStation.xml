@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="sellingStation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>
+		    <en>Selling Station Mining</en>
+            <de>Verkaufsstation Mining</de>
+			<fr>Station De Vente</fr>
+		</name>
+			
+			
+		<image>store_sellingStation.dds</image>
+        <price>15000</price>
+        <dailyUpkeep>0</dailyUpkeep>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <species>placeable</species>
+        <category>sellingPoints</category>
+		
+		 <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>sellingPoints</tab>
+        </brush>
+        
+        <vertexBufferMemoryUsage>78164</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>18648</indexBufferMemoryUsage>
+        <textureMemoryUsage>1485904</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+	
+    <base>
+    <filename>sellingStation.i3d</filename>
+	</base>
+	
+    <placement useRandomYRotation="false" useManualYRotation="true"/>
+    
+	
+	<sellingStation supportsExtension="true" litersForFullPriceDrop="200000" fullPriceRecoverHours="48">
+	
+        <unloadTrigger exactFillRootNode="0|0|0|0|0" baleTriggerNode="0|0|0|0|1" fillTypes=" GOLD GOLDBAR OLIVE GRAPE WHEAT BARLEY CANOLA SUNFLOWER SOYBEAN MAIZE POTATO SUGARBEET SUGARCANE COTTON OAT OILSEEDRADISH SEEDS LIME LIQUIDFERTILIZER FERTILIZER HERBICIDE MANURE SUGARCANE SILAGE FORAGE PIGFOOD WOODCHIPS LIQUIDMANURE STRAW GRASS DRYGRASS_WINDROW MILK GRASS_WINDROW DIGESTATE CHAFF SUGAR WOOL WATER ROADSALT WHEAT BARLEY CANOLA SUNFLOWER SOYBEAN MAIZE OAT SORGHUM POTATO SUGARBEET SUGARCANE WOODCHIPS EGG WOOL MILK BREAD HONEY BUTTER FLOUR CHEESE SUNFLOWER_OIL CANOLA_OIL OLIVE_OIL TOMATO LETTUCE STRAWBERRY RAISINS GRAPEJUICE CAKE CHOCOLATE BOARDS COTTON DIESEL FABRIC SUGAR CLOTHES CEREAL GRAPE OLIVE FURNITURE SEEDS LIME DIGESTATE MANURE LIQUIDMANURE WEED STONE SNOW FERTILIZER LIQUIDFERTILIZER HERBICIDE PIGFOOD SILAGE_ADDITIVE MINERAL_FEED CHAFF FORAGE FORAGE_MIXING METHANE ROADSALT STRAW DRYGRASS_WINDROW GRASS_WINDROW SILAGE SUGARBEET_CUT ASPHALT LIMESTONE LIME LITHIUM CONCRETE CEMENT STONE COAL TAILINGS DIRT GRAVEL SAND IRON  RIVERSAND RIVERSANDP RUBBER TIRES TAR STONEPOWDER STEELROLL LITHIUMORE CONCENTRATE CRUDEOIL CLAY TANZANITE OPAL PIPE SAPPHIRE DIAMOND EMERALD RUBY GEMDIRT SUNSTONE"  fillLitersPerSecond="20000" infiniteCapacity="true" >
+		<baleTrigger triggerNode="0|0|0|0|1" deleteLitersPerSecond="50000"/>
+		</unloadTrigger>
+		<fillType name="GOLD" priceScale="1000" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="GOLDBAR" priceScale="1000" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="pipe" priceScale=".2" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="sunstone" priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="opal" priceScale="1.05" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="gemdirt" priceScale=".2" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="ruby" priceScale="1.15" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="emerald" priceScale="1.05" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="diamond" priceScale="2" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="sapphire" priceScale="1.3" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="tanzanite" priceScale="2.5" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="opal" priceScale="1.3" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="seeds" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="concentrate" priceScale=".2" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="lime" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+      	<fillType name="liquidFertilizer" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="Fertilizer" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="herbicide" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="manure" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="wheat" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="barley" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="canola" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="sunflower" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="soybean" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="maize" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="potato" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="sugarBeet" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="grass" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="oilseedRadish" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />	
+		<fillType name="oat" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />		
+		<fillType name="sugarCane" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />		
+		<fillType name="cotton" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="silage" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="forage" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="pigfood" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="woodchips" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />		
+	    <fillType name="olive" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="liquidmanure" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+	    <fillType name="grape" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="straw" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="grass" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="drygrass_windrow" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />		
+		<fillType name="milk" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="grass_windrow" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+	
+		<fillType name="digestate" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+	
+		<fillType name="chaff" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="sugar" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="water" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+	
+		<fillType name="wool" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		
+		<fillType name="WHEAT"          	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="BARLEY"         	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CANOLA"         	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SUNFLOWER"      	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SOYBEAN"        	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="MAIZE"          	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="OAT"            	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SORGHUM"        	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="POTATO"         	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SUGARBEET"      	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SUGARCANE"      	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="EGG"            	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="WOOL"           	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="MILK"           	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="BREAD"          	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="HONEY"          	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="BUTTER"         	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CHEESE"         	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SUNFLOWER_OIL"  	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CANOLA_OIL"     	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="OLIVE_OIL"      	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="TOMATO"         	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="LETTUCE"        	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="STRAWBERRY"     	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="RAISINS"        	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="GRAPEJUICE"     	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="COTTON"         	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="FLOUR"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CAKE"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CHOCOLATE"   		priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="BOARDS"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="WOODCHIPS"   		priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="DIESEL"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="FABRIC"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SUGAR"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CLOTHES"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CEREAL"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="GRAPE"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="OLIVE"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="FURNITURE"   		priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SEEDS"              priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="LIME"               priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="DIGESTATE"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="MANURE"             priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="LIQUIDMANURE"       priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="WEED"               priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="STONE"              priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SNOW"               priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="FERTILIZER"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="LIQUIDFERTILIZER"   priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="HERBICIDE"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="PIGFOOD"          	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SILAGE_ADDITIVE"    priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="MINERAL_FEED"    	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="CHAFF"    			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="FORAGE"    			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="FORAGE_MIXING"    	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="METHANE"    		priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="ROADSALT"    		priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		
+		<fillType name="STRAW"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="DRYGRASS_WINDROW"   priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="GRASS_WINDROW"   	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SILAGE"   			priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="SUGARBEET_CUT"   	priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+     <fillType name="asphalt"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="limestone"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="lithium"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="concrete"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="cement"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="stone"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="coal"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="tailings"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="dirt"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="gravel"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="sand"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="iron"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="riversand"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="riversandp"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="rubber"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="tires"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="tar"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="stonepowder"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="steelroll"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="lithiumore"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="crudeoil"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="clay"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+    </sellingStation>
+    
+	<hotspots>
+        <hotspot name="selling Station" fullName="Selling Point" imageName="SELLING_POINT" hidable="true" linkNode="0|1" category="CATEGORY_TRIGGERS"/>
+    </hotspots>
+	
+		<indoorAreas></indoorAreas>
+		
+	<clearAreas>
+        <clearArea startNode="2|0" widthNode="2|0|0" heightNode="2|0|1"/>
+    </clearAreas>
+
+    <leveling maxEdgeAngle="30" maxSlope="75" maxSmoothDistance="10" requireLeveling="true">
+        <levelAreas>
+        <levelArea startNode="2|0" heightNode="2|0|1" widthNode="2|0|0" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+	
+	 <ai>
+        <updateAreas>
+            <updateArea startNode="0>2|0|1" endNode="0>2|0|0" />
+        </updateAreas>
+    </ai>
+
+	
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="0>2|0|1" endNode="0>2|0|0" />
+    </tipOcclusionUpdateAreas>
+
+   <i3dMappings>
+        <i3dMapping id="exactFillRootNode" node="0>0|0|0|0|0" />
+    </i3dMappings>
+	
+</placeable>

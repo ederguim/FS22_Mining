@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>scrap2Pallet</name>
+        <image>fillplanes/fruit_tp_hud/hud_fill_scrap2.png</image>
+        <category>pallets</category>
+        <brand>SCRAP</brand>
+        <showInStore>false</showInStore>
+        <canBeSold>false</canBeSold>
+        <financeCategory>OTHER</financeCategory>
+        <vertexBufferMemoryUsage>58624</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>11520</indexBufferMemoryUsage>
+        <textureMemoryUsage>2031616</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_pallet</typeDesc>
+        <filename>pallet/scrapPallet/scrap2Pallet.i3d</filename>
+        <size width="2.8" length="1" height="4.8" />
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="260"/>
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false" />
+    </base>
+
+    <animations>
+        <animation name="animation">
+			<part node="0>4|0" startTime="0.000" endTime="0.001" visibility="false" />
+            <part node="0>4|0" startTime="0.002" endTime="1.000" visibility="true" /> 		
+		
+			<part node="windows" startTime="0.000" endTime="0.300" visibility="false" />
+            <part node="windows" startTime="0.301" endTime="1.000" visibility="true" />  		
+		
+			<part node="windows" startTime="0.000" endTime="0.300" visibility="false" />
+            <part node="windows" startTime="0.301" endTime="1.000" visibility="true" />  		
+		
+			<part node="wheelBackRight" startTime="0.000" endTime="0.500" visibility="false" />
+            <part node="wheelBackRight" startTime="0.501" endTime="1.000" visibility="true" />  		
+		
+			<part node="wheelBackLeft" startTime="0.000" endTime="0.700" visibility="false" />
+            <part node="wheelBackLeft" startTime="0.701" endTime="1.000" visibility="true" />  
+
+			
+			<part node="wheelFrontRight" startTime="0.000" endTime="0.800" visibility="false" />
+            <part node="wheelFrontRight" startTime="0.801" endTime="1.000" visibility="true" />
+			
+			<part node="wheelFrontLeft" startTime="0.000" endTime="0.990" visibility="false" />
+            <part node="wheelFrontLeft" startTime="0.991" endTime="1.000" visibility="true" />
+			
+
+            <sound template="clackVar6" startTime="0.1" direction="-1" pitchScale="0.9" volumeScale="2.5"/>
+            <sound template="sheetImp02" startTime="0.1" direction="-1" pitchScale="0.9" volumeScale="2.5" />
+            <sound template="sheetImp02" startTime="0.300" direction="-1" pitchScale="0.9" volumeScale="2.5" />
+			
+            <sound template="clackVar2" startTime="0.3" direction="-1" pitchScale="0.4" volumeScale="2.5"/>
+            <sound template="clackVar1" startTime="0.6" direction="-1" pitchScale="0.4" volumeScale="2.5"/>
+            <sound template="debrisCrusherWork" startTime="0.98" direction="-1" pitchScale="1.1" volumeScale="2.5"/>
+            <sound template="debrisCrusherWork" startTime="0.58" direction="-1" pitchScale=".8" volumeScale="2.5"/>
+            <sound template="debrisCrusherWork" startTime="0.18" direction="-1" pitchScale=".4" volumeScale="2.5"/>
+			
+            <sound template="sheetImp02" startTime="0.8" direction="-1" pitchScale="0.9" volumeScale="2.5"/>
+            <sound template="sheetImp02" startTime="0.95" direction="-1" pitchScale="0.9" volumeScale="2.5"/>
+            <sound template="clackVar1" startTime="0.5" direction="-1" pitchScale="0.9" volumeScale="2.5"/>
+            <sound template="clackVar1" startTime="0.7" direction="-1" pitchScale="0.9" volumeScale="2.5"/>
+            <sound template="clackVar1" startTime="0.991" direction="-1" pitchScale="0.9" volumeScale="2.5"/>
+			
+            <sound template="clackVar1" startTime="0.8" direction="-1" pitchScale="0.9" volumeScale="2.5"/>
+            <sound template="clackVar2" startTime="0.9" direction="-1" pitchScale="0.9" volumeScale="2.5"/>
+            <sound template="sheetImp02" startTime="0.4" direction="-1" pitchScale="0.8" volumeScale="2.5" />
+
+        </animation>
+    </animations>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="SCRAP2" capacity="2000">
+                        <fillLevelAnimation name="animation" resetOnEmpty="true" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="dischargeNode" emptySpeed="300" fillUnitIndex="1" maxDistance="6" canStartDischargeAutomatically="true" playSound="true"/>
+             <effects>
+                <effectNode effectNode="effectSmoke" materialType="unloadingSmoke"  fadeTime="0" />
+            </effects>
+
+ </dischargeable>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="0>5|0"/>
+            <meshNode node="0>5|1"/>
+
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="furnitureStackPallet_component1" node="0>" />
+        <i3dMapping id="dynamicMountTrigger" node="0>1" />
+        <i3dMapping id="dischargeNode" node="0>2" />
+        <i3dMapping id="wheelFrontLeft" node="0>4|0|0|0" />
+        <i3dMapping id="wheelFrontRight" node="0>4|0|0|1" />
+        <i3dMapping id="wheelBackLeft" node="0>4|0|0|2" />
+        <i3dMapping id="wheelBackRight" node="0>4|0|0|3" />
+		
+        <i3dMapping id="staticLights" node="0>4|0|1|0" />
+        <i3dMapping id="windows" node="0>4|0|2|2" />
+        <i3dMapping id="effectSmoke" node="0>7" />
+		
+		
+		
+		
+		
+    </i3dMappings>
+</vehicle>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="bakeryBoxPallet" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="pallet_diffuse.dds"/>
+    <File fileId="6" filename="$data/objects/pallets/euroPallet01_normal.png"/>
+    <File fileId="7" filename="$data/objects/pallets/euroPallet01_specular.png"/>
+    <File fileId="5" filename="$data/objects/pallets/euroPallet02_diffuse.png"/>
+    <File fileId="11" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="3" filename="$data/shared/default_normal.dds"/>
+    <File fileId="4" filename="$data/shared/default_specular.dds"/>
+    <File fileId="15" filename="$data/shared/materialHolders/ratchet_normal.png"/>
+    <File fileId="16" filename="$data/shared/materialHolders/ratchet_specular.png"/>
+    <File fileId="17" filename="$data/shared/materialHolders/tensionBelt_diffuse.png"/>
+    <File fileId="18" filename="$data/shared/materialHolders/tensionBelt_normal.png"/>
+    <File fileId="19" filename="$data/shared/materialHolders/tensionBelt_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="euroPallet01_mat" materialId="4">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="euroPallet01_mat1" materialId="5">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="kuhlturm1" materialId="6" diffuseColor="1 1 1 1" specularColor="0.929412 1 1">
+    </Material>
+    <Material name="lambert1" materialId="7" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="ratchet_mat" materialId="8" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="11" customShaderVariation="colorMask">
+      <Normalmap fileId="15"/>
+      <Glossmap fileId="16"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="strap" materialId="9" diffuseColor="0.8 0.184314 0.611765 1" customShaderId="11" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="tensionBeltStatic_mat" materialId="10">
+      <Texture fileId="17"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="19"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="pipePallet.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="steelPallet_component1" dynamic="true" compound="true" collisionMask="2109442" density="0.0001" clipDistance="150" nodeId="32" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="2" name="euroPalletVis" nodeId="33" materialIds="4" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="pallet02_mat" visibility="false" clipDistance="1" nodeId="34" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="4" name="dynamicMountTrigger" translation="0 0.0904753 0" kinematic="true" trigger="true" collisionMask="134217728" nodeId="35" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="dischargeNode" translation="0 0.8 0" nodeId="36"/>
+        <TransformGroup name="cols" scale="1 1 1.013" visibility="false" clipDistance="10" nodeId="37">
+          <Shape shapeId="5" name="solidCol" compoundChild="true" collisionMask="16781578" density="0.0001" nodeId="38" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="6" name="colChunk_back_left" compoundChild="true" collisionMask="12552" nodeId="39" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="7" name="colChunk_back_center" compoundChild="true" collisionMask="12288" nodeId="40" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="8" name="colChunk_back_right" compoundChild="true" collisionMask="12552" nodeId="41" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="9" name="colChunk_center_left" compoundChild="true" collisionMask="12288" nodeId="42" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="10" name="colChunk_center_right" compoundChild="true" collisionMask="12288" nodeId="43" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="11" name="colChunk_front_left" compoundChild="true" collisionMask="12552" nodeId="44" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="12" name="colChunk_front_center" compoundChild="true" collisionMask="12288" nodeId="45" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="13" name="colChunk_front_right" compoundChild="true" collisionMask="12552" nodeId="46" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="content" translation="0.000215997 0.0163319 0" scale="0.823188 0.870102 0.541328" nodeId="47">
+          <Shape shapeId="14" name="rohr2" translation="0.535318 0.325687 -0.615928" rotation="180 -1.1202 -180" scale="1.299 1.25 0.267" clipDistance="400" nodeId="48" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="rohr2" translation="0.18087 0.325687 -0.608997" rotation="180 -1.1202 -180" scale="1.299 1.25 0.267" clipDistance="400" nodeId="49" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="rohr2" translation="-0.192448 0.325687 -0.601698" rotation="180 -1.1202 -180" scale="1.299 1.25 0.267" clipDistance="400" nodeId="50" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="rohr2" translation="-0.556945 0.325687 -0.594571" rotation="180 -1.1202 -180" scale="1.29857 1.25 0.267" clipDistance="400" nodeId="51" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="rohr2" translation="0.17647 0.674833 -0.608911" rotation="180 -1.1202 -180" scale="1.299 1.25 0.267" clipDistance="400" nodeId="52" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="rohr2" translation="-0.195208 0.670268 -0.601644" rotation="180 -1.1202 -180" scale="1.299 1.25 0.267" clipDistance="400" nodeId="53" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="rohr2" translation="-0.534663 0.671788 -0.595006" rotation="180 -1.1202 -180" scale="1.299 1.25 0.267" clipDistance="400" nodeId="54" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="rohr2" translation="0.509731 0.674833 -0.615428" rotation="180 -1.1202 -180" scale="1.25831 1.25 0.267" clipDistance="400" nodeId="55" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="rohr2" translation="-0.371143 0.972421 -0.598204" rotation="180 -1.1202 -180" scale="1.299 1.25 0.267" clipDistance="400" nodeId="56" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="rohr2" translation="-0.00989163 0.976495 -0.605267" rotation="180 -1.1202 -180" scale="1.299 1.25 0.267" clipDistance="400" nodeId="57" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="rohr2" translation="0.338034 0.96469 -0.612071" rotation="180 -1.1202 -180" scale="1.299 1.25 0.267" clipDistance="400" nodeId="58" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="15" name="strap12" translation="0.00841007 -0.0363753 0" scale="1.231 1.20272 1" clipDistance="300" nodeId="59" materialIds="9" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="16" name="ratchet" translation="-0.124534 0.986308 0.00014516" rotation="-180 90 -180" scale="0.50767 0.388586 0.387549" clipDistance="75" nodeId="60" materialIds="8" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="sizeMarker" translation="5.28998e-16 0 3.28092" nodeId="61"/>
+              <Shape shapeId="17" name="beltPart" translation="-2.2366e-22 -5.42101e-20 -4.44089e-16" clipDistance="75" nodeId="62" materialIds="10" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="17" name="beltPart" translation="-4.80642e-08 -1.20948e-20 -0.193228" clipDistance="75" nodeId="63" materialIds="10" castsShadows="true" receiveShadows="true"/>
+            </Shape>
+            <Shape shapeId="18" name="hook" translation="-0.604892 0.100149 0.00108315" rotation="-90 90 0" scale="0.520379 0.4 0.4" clipDistance="75" nodeId="64" materialIds="8" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="sizeMarker" translation="0 0 1.38414" nodeId="65"/>
+              <Shape shapeId="19" name="beltPart" clipDistance="75" nodeId="66" materialIds="10" castsShadows="true" receiveShadows="true"/>
+            </Shape>
+            <Shape shapeId="18" name="hook" translation="0.60339 0.10245 0.000418679" rotation="-73.5017 -90 0" scale="0.520379 0.4 0.4" clipDistance="75" nodeId="67" materialIds="8" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="sizeMarker" translation="0 0 1.38414" nodeId="68"/>
+              <Shape shapeId="19" name="beltPart" clipDistance="75" nodeId="69" materialIds="10" castsShadows="true" receiveShadows="true"/>
+            </Shape>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="contentCols" visibility="false" nodeId="70">
+          <Shape shapeId="20" name="tireBoxCol01" translation="0.439622 0.279011 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="71" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="20" name="tireBoxCol02" translation="0.139503 0.279011 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="72" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="20" name="tireBoxCol02" translation="-0.159386 0.279011 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="73" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="20" name="tireBoxCol03" translation="-0.438996 0.279011 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="74" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="20" name="tireBoxCol04" translation="0.439622 0.587882 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="75" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="20" name="tireBoxCol05" translation="0.139503 0.587882 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="76" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="20" name="tireBoxCol06" translation="-0.159386 0.587882 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="77" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="20" name="tireBoxCol07" translation="-0.438996 0.587882 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="78" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="20" name="tireBoxCol08" translation="0.280247 0.838396 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="79" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="20" name="tireBoxCol09" translation="-0.0148273 0.838396 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="80" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="20" name="tireBoxCol010" translation="-0.310186 0.838396 -0.016499" rotation="0 0 90" compoundChild="true" nodeId="81" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+      </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="60">
+      <Attribute name="isRatchet" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="62">
+      <Attribute name="isHook" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="63">
+      <Attribute name="isHook" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="64">
+      <Attribute name="isHook" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="66">
+      <Attribute name="isHook" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="67">
+      <Attribute name="isHook" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="69">
+      <Attribute name="isHook" type="boolean" value="true"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

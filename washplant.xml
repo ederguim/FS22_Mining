@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>Gold Washplant V2</name>
+        <image>store.png</image>
+        <price>96000</price>
+		<canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>lizard</brand>
+        <species>placeable</species>
+        <category>productionPoints</category>
+		<brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+        </brush>
+        <vertexBufferMemoryUsage>50000</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>10000</indexBufferMemoryUsage>
+        <textureMemoryUsage>500000</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>washplant.i3d</filename>
+    </base>
+	
+	<hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="unloadTriggerMarker" teleportNode="teleportNode" />
+    </hotspots>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" />
+
+    <infoTrigger triggerNode="infoTrigger" />
+	
+	<clearAreas>
+        <clearArea startNode="0>0|0" widthNode="0>0|0|0" heightNode="0>0|0|1"/>
+		<clearArea startNode="0>0|1" widthNode="0>0|1|0" heightNode="0>0|1|1"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="90" maxEdgeAngle="90" >
+        <levelAreas>
+            <levelArea startNode="0>1|0" widthNode="0>1|0|0" heightNode="0>1|0|1" groundType="dirt"/>
+			<levelArea startNode="0>1|1" widthNode="0>1|1|0" heightNode="0>1|1|1" groundType="dirt"/>
+			<levelArea startNode="0>1|2" widthNode="0>1|2|0" heightNode="0>1|2|1" groundType="dirt"/>
+		</levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="0>2|0" widthNode="0>2|0|0" heightNode="0>2|0|1" />
+    </indoorAreas>
+	
+	<tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="0>4|0" endNode="0>4|0|0" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas />
+    </ai>
+
+    <triggerMarkers>
+        <triggerMarker node="warningStripes_palletSpawnArea" adjustToGround="true" />
+        <triggerMarker node="playerTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" adjustToGround="true" />
+        <triggerMarker node="unloadTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="false" />
+		<triggerMarker node="unloadTriggerMarker2" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />
+		<triggerMarker node="unloadTriggerMarker3" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />
+    </triggerMarkers>
+
+    <productionPoint>
+        <productions sharedThroughputCapacity="false">
+			<production id="STONE" name="Stone" params="l10n_fillType_concentrate | l10n_fillType_stone | l10n_fillType_dirt |l10n_fillType_tailings" cyclesPerHour="15" costsPerActiveHour="1000">
+                <inputs>
+                    <input fillType="STONE" amount="17000" />
+					<input fillType="DIESEL" amount="300" />
+                </inputs>
+                <outputs>
+					<output fillType="TAILINGS" amount="15500" />
+                    <output fillType="CONCENTRATE"  amount="1000" />
+                    <output fillType="GEMDIRT"  amount="500" />
+                </outputs>
+            </production>
+
+            <production id="DIRT" name="Dirt"  cyclesPerHour="15" costsPerActiveHour="1000">
+                <inputs>
+                    <input fillType="DIRT" amount="14000" />
+					<input fillType="DIESEL" amount="300" />
+                </inputs>
+                <outputs>
+					<output fillType="TAILINGS" amount="12500" />
+                    <output fillType="CONCENTRATE"  amount="1000" />
+                    <output fillType="GEMDIRT"  amount="500" />
+                </outputs>
+            </production>
+		
+            <production id="CONCASSE" name="Concasse" params="l10n_fillType_concentrate | l10n_fillType_stone | l10n_fillType_gemdirt |l10n_fillType_tailings" cyclesPerHour="15" costsPerActiveHour="1000">
+                <inputs>
+                    <input fillType="CONCASSE" amount="17000"/>
+					<input fillType="DIESEL" amount="300"/>
+                </inputs>
+                <outputs>
+					<output fillType="TAILINGS" amount="15500" />
+                    <output fillType="CONCENTRATE"  amount="1000" />
+                    <output fillType="GEMDIRT"  amount="500" />
+                </outputs>
+            </production>
+
+            <production id="GemDirt" name="GemDirt"  cyclesPerHour="15" costsPerActiveHour="1000">
+                <inputs>
+                    <input fillType="DIRT1" amount="14000"/>
+					<input fillType="DIESEL" amount="300"/>
+                </inputs>
+                <outputs>
+					<output fillType="TAILINGS" amount="12500" />
+                    <output fillType="CONCENTRATE"  amount="1000" />
+                    <output fillType="GEMDIRT"  amount="500" />
+                </outputs>
+            </production>
+
+        </productions>
+
+        <storage isExtension="false" fillLevelSyncThreshold="100" >
+            <capacity fillType="CONCASSE"   capacity="50000" />
+            <capacity fillType="DIRT1"   capacity="50000" />
+			<capacity fillType="STONE"   capacity="50000" />
+            <capacity fillType="DIRT"   capacity="50000" />
+
+			<capacity fillType="DIESEL"   capacity="5000" />
+			<capacity fillType="TAILINGS"   capacity="50000" />
+            <fillPlane fillType="TAILINGS" node="tailingsHill" minY="-3.25" maxY="0" />
+            <capacity fillType="CONCENTRATE"   capacity="10000" />
+            <capacity fillType="GEMDIRT"   capacity="10000" />
+        </storage>
+
+        <sellingStation node="CONCASSE" supportsExtension="false">
+            <unloadTrigger exactFillRootNode="unloadTrigger" fillTypes="CONCASSE DIRT1" priceScale=".5" aiNode="aiNode" />
+			<unloadTrigger exactFillRootNode="unloadTrigger2" fillTypes="DIESEL" priceScale=".5"  aiNode="aiNode2" />
+        </sellingStation>
+		
+		<loadingStation node="loadingStation" supportsExtension="false">
+            <loadTrigger fillTypes="TAILINGS" triggerNode="loadTrigger" fillLitersPerSecond="1000" dischargeNode="dischargeNode" aiNode="loadingStationAINode">
+            </loadTrigger>
+        </loadingStation>
+		
+        <palletSpawner>
+            <spawnPlaces>
+                <spawnPlace startNode="spawnSpace1start" />
+                <spawnPlace startNode="spawnSpace2start" />
+            </spawnPlaces>
+        </palletSpawner>
+
+        <playerTrigger node="playerTrigger" />
+		
+		<effectNodes>
+            <effectNode effectNode="0>16|0" materialType="WASHER" />
+			<effectNode effectNode="0>16|1" materialType="WASHER" />
+			<effectNode effectNode="0>16|2" materialType="WASHER" />
+			<effectNode effectNode="0>16|3" materialType="WASHER" />
+			<effectNode effectNode="0>16|4" materialType="WASHER" />
+			<effectNode effectNode="0>16|5" materialType="WASHER" />
+			<effectNode effectNode="0>16|6" materialType="WASHER" />
+			<effectNode effectNode="0>16|7" materialType="WASHER" />
+			<effectNode effectNode="0>16|8" materialType="WASHER" />
+			<effectNode effectNode="0>16|9" materialType="WASHER" />
+			<effectNode effectNode="0>16|10" materialType="WASHER" />
+			<effectNode effectNode="0>16|11" materialType="WASHER" />
+			<effectNode effectNode="0>16|12" materialType="WASHER" />
+			<effectNode effectNode="0>16|13" materialType="WASHER" />
+			<effectNode effectNode="0>16|14" materialType="WASHER" />
+			<effectNode effectNode="0>16|15" materialType="WASHER" />
+			<effectNode effectNode="0>16|16" materialType="WASHER" />
+			<effectNode effectNode="0>16|17" materialType="WASHER" />
+			<effectNode effectNode="0>16|18" materialType="WASHER" />
+			<effectNode effectNode="0>16|19" materialType="WASHER" />
+			<effectNode effectNode="0>16|20" materialType="WASHER" />
+			<effectNode effectNode="0>16|21" materialType="WASHER" />
+			<effectNode effectNode="0>16|22" materialType="WASHER" />
+			<effectNode effectNode="0>16|23" materialType="WASHER" />
+			<effectNode effectNode="0>16|24" materialType="WASHER" />
+			<effectNode effectNode="0>16|25" materialType="WASHER" />
+			<effectNode effectNode="0>16|26" materialType="WASHER" />
+			<effectNode effectNode="0>16|27" materialType="WASHER" />
+			<effectNode effectNode="0>16|28" materialType="WASHER" />
+			<effectNode effectNode="0>16|29" materialType="WASHER" />
+			<effectNode effectNode="0>16|30" materialType="WASHER" />
+			<effectNode effectNode="0>16|31" materialType="WASHER" />
+			<effectNode effectNode="0>16|32" materialType="WASHER" />
+			<effectNode effectNode="0>16|33" materialType="WASHER" />
+			<effectNode effectNode="0>16|33" materialType="WASHER" />
+			<effectNode effectNode="0>16|33" materialType="WASHER" />
+			<effectNode effectNode="0>16|34" materialType="WASHER" />
+			<effectNode effectNode="0>16|35" materialType="WASHER" />
+			<effectNode effectNode="0>16|36" materialType="WASHER" />
+			<effectNode effectNode="0>18|0" materialType="unloadingSmoke"  fadeTime="9" />
+			<effectNode effectNode="0>18|1" materialType="unloadingSmoke"  fadeTime="2" />
+        </effectNodes>
+		
+        <animationNodes>
+			<animationNode node="TrommelPlates" rotAxis="3" rotSpeed="70" />
+			<animationNode node="TrommelRing" rotAxis="3" rotSpeed="70" />
+			<animationNode class="ScrollingAnimation" node="0>17|0" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|1" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|2" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|3" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|4" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|5" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|6" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|7" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|8" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|9" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|10" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|11" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|12" scrollSpeed="0.95" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|13" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|14" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|15" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|16" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|17" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|18" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|19" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|20" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|21" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|22" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|23" scrollSpeed="1.3" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|24" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|25" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			<animationNode class="ScrollingAnimation" node="0>17|26" scrollSpeed="0.75" scrollLength="3.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>
+			
+        </animationNodes>
+		
+		<animationNodes>
+            
+        </animationNodes>
+
+        <sounds>
+            <idle template="grainMillIdle" linkNode="0>" />
+            <active template="grainMillWork" linkNode="0>" />
+        </sounds>
+    </productionPoint>
+
+    <i3dMappings>
+        <i3dMapping id="infoTrigger" node="0>3" />
+        <i3dMapping id="effect1" node="0>6|0" />
+        <i3dMapping id="effect2" node="0>6|1" />
+        <i3dMapping id="effect3" node="0>6|2" />
+        <i3dMapping id="paydirt" node="0>7" />
+		<i3dMapping id="paydirt1" node="0>13" />
+		<i3dMapping id="paydirt2" node="0>14" />/>
+        <i3dMapping id="unloadTrigger" node="0>7|0" />
+		<i3dMapping id="unloadTrigger2" node="0>13|0" />
+		<i3dMapping id="unloadTrigger3" node="0>14|0" />
+        <i3dMapping id="grainGateLinkNode" node="0>7|0|0" />
+        <i3dMapping id="unloadTriggerMarker" node="0>7|0|1" />
+		<i3dMapping id="unloadTriggerMarker2" node="0>13|1" />
+		<i3dMapping id="unloadTriggerMarker3" node="0>14|1" />
+        <i3dMapping id="teleportNode" node="0>7|1" />
+        <i3dMapping id="aiNode" node="0>7|2" />
+		<i3dMapping id="aiNode2" node="0>13|2" />
+		<i3dMapping id="aiNode3" node="0>14|2" />
+        <i3dMapping id="playerTrigger" node="0>8|0" />
+        <i3dMapping id="playerTriggerMarker" node="0>8|0|0" />
+        <i3dMapping id="spawnSpace1start" node="0>9|0" />
+        <i3dMapping id="spawnSpace2start" node="0>9|1" />
+        <i3dMapping id="warningStripes" node="0>10" />
+        <i3dMapping id="warningStripes_palletSpawnArea" node="0>10|0" />
+		<i3dMapping id="tailingsHill" node="0>11|3|0" />
+		<i3dMapping id="loadingStation" node="0>11" />
+        <i3dMapping id="loadTrigger" node="0>11|0" />
+        <i3dMapping id="dischargeNode" node="0>11|0|0" />
+        <i3dMapping id="loadTriggerMarker" node="0>11|1" />
+        <i3dMapping id="loadingStationAINode" node="0>11|2" />
+		<i3dMapping id="TrommelPlates" node="12|1|15"/>
+		<i3dMapping id="TrommelRing" node="12|1|14"/>
+    </i3dMappings>
+
+</placeable>

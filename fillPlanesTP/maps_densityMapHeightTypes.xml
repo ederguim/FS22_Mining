@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map>
+    <densityMapHeightTypes firstChannel="0" numChannels="6">
+        <densityMapHeightType fillTypeName="DIRT" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true">
+            <collision scale="1.0" baseOffset="0.0" minOffset="0.0" maxOffset="-0.04" />
+        </densityMapHeightType>
+        <densityMapHeightType fillTypeName="DIRT1" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true">
+            <collision scale="1.0" baseOffset="0.0" minOffset="0.0" maxOffset="-0.04" />
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="DIRT_VEGETAL" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true">
+            <collision scale="1.0" baseOffset="0.0" minOffset="0.0" maxOffset="-0.04" />
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="CONCASSE" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="false">
+            <collision scale="1.0" baseOffset="0.0" minOffset="0.0" maxOffset="-0.04" />
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="SAND" maxSurfaceAngle="40" fillToGroundScale="1.8" allowsSmoothing="true">
+            <collision scale="1.0" baseOffset="0.1" minOffset="0.2" maxOffset="0.7" />
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="GRAVEL" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true">
+            <collision scale="1.0" baseOffset="0.0" minOffset="0.0" maxOffset="-0.04" />
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="ASPHALT" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true">
+            <collision scale="1.0" baseOffset="0.0" minOffset="0.0" maxOffset="-0.04" />
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="CONCRETE" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="false">
+            <collision scale="1.0" baseOffset="0.0" minOffset="0.0" maxOffset="-0.04" />
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="CEMENT" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="false">
+            <collision scale="1.0" baseOffset="0.0" minOffset="0.0" maxOffset="-0.04" />
+        </densityMapHeightType>
+		<densityMapHeightType fillTypeName="ROCK" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="false">
+            <collision scale="1.0" baseOffset="0.0" minOffset="0.0" maxOffset="-0.04" />
+        </densityMapHeightType>
+    </densityMapHeightTypes>
+</map>

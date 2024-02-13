@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="7" filename="../../maps/fillPlanesTP/fruit_tp_hud/hud_fill_carengine.dds"/>
+    <File fileId="14" filename="../../maps/fillPlanesTP/fruit_tp_hud/hud_fill_electronics.dds"/>
+    <File fileId="10" filename="../../maps/fillPlanesTP/fruit_tp_hud/hud_fill_nails.dds"/>
+    <File fileId="9" filename="drugs.dds"/>
+    <File fileId="1" filename="ethanol.dds"/>
+    <File fileId="12" filename="gunp.dds"/>
+    <File fileId="2" filename="jackwhisky.dds"/>
+    <File fileId="5" filename="parts.dds"/>
+    <File fileId="4" filename="plastics.dds"/>
+    <File fileId="11" filename="primers.dds"/>
+    <File fileId="6" filename="tools.dds"/>
+    <File fileId="8" filename="tranny.dds"/>
+    <File fileId="3" filename="vodka.dds"/>
+    <File fileId="13" filename="wine_d.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="UnnamedMaterial" materialId="4">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="39">
+      <Texture fileId="14"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="5">
+      <Texture fileId="10"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="6">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="7">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="8">
+      <Texture fileId="12"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="9">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="10">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="11">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="12">
+      <Texture fileId="11"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="13">
+      <Texture fileId="6"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="14">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="15">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="16">
+      <Texture fileId="13"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="labels.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="ethanol" nodeId="21" materialIds="7" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="1" name="whisky" nodeId="22" materialIds="9" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="1" name="vodka" nodeId="23" materialIds="15" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="1" name="plastics" nodeId="24" materialIds="11" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="1" name="parts" nodeId="25" materialIds="10" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="1" name="tools" nodeId="26" materialIds="13" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="2" name="engine" nodeId="27" materialIds="4" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="1" name="tranny" nodeId="28" materialIds="14" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="1" name="drugs" nodeId="29" materialIds="6" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="3" name="NAILS" scale="0.417206 1 0.442028" nodeId="30" materialIds="5" distanceBlending="false"/>
+      <Shape shapeId="3" name="primers" scale="0.26907 1 0.263164" nodeId="31" materialIds="12" distanceBlending="false"/>
+      <Shape shapeId="3" name="GUNP" scale="0.469079 1 0.539105" nodeId="32" materialIds="8" distanceBlending="false"/>
+      <Shape shapeId="3" name="wine" scale="0.469079 1 0.539105" nodeId="33" materialIds="16" distanceBlending="false"/>
+      <Shape shapeId="3" name="electronics" scale="0.469079 1 0.539105" nodeId="73" materialIds="39" distanceBlending="false"/>
+  </Scene>
+
+</i3D>

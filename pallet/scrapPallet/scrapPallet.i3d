@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="vehicle_01" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="$data/objects/pallets/euroPallet01_diffuse.png"/>
+    <File fileId="3" filename="$data/objects/pallets/euroPallet01_normal.png"/>
+    <File fileId="4" filename="$data/objects/pallets/euroPallet01_specular.png"/>
+    <File fileId="5" filename="$data/objects/pallets/euroPallet02_diffuse.png"/>
+    <File fileId="8" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="6" filename="$data/vehicles/cars/vehicle_01/vehicle01Lights_normal.png"/>
+    <File fileId="7" filename="$data/vehicles/cars/vehicle_01/vehicle01Lights_vmask.png"/>
+    <File fileId="12" filename="$data/vehicles/cars/vehicle_01/vehicle01_normal.png"/>
+    <File fileId="13" filename="$data/vehicles/cars/vehicle_01/vehicle01_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="euroPallet01_mat" materialId="4">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="euroPallet01_mat1" materialId="5">
+      <Texture fileId="5"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="lambert1" materialId="6" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="vehicle01_mat" materialId="7" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="8" customShaderVariation="colorMask">
+      <Normalmap fileId="12"/>
+      <Glossmap fileId="13"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="1 0 0 32"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="vehicle01Lights_mat" materialId="8" diffuseColor="0.494118 0.494118 0.494118 1" alphaBlending="true" customShaderId="8" customShaderVariation="staticLight">
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="1 1 1 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="0 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="scrapPallet.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="scrapPallet_component1" dynamic="true" compound="true" collisionMask="2109442" density="0.0001" clipDistance="150" nodeId="32" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="2" name="euroPalletVis" nodeId="33" materialIds="4" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="pallet02_mat" visibility="false" clipDistance="1" nodeId="34" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="4" name="dynamicMountTrigger" translation="0 0.0904753 0" visibility="false" kinematic="true" trigger="true" collisionMask="134217728" nodeId="35" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="dischargeNode" translation="0 0.6 0" nodeId="36"/>
+        <TransformGroup name="cols" visibility="false" clipDistance="10" nodeId="37">
+          <Shape shapeId="5" name="solidCol" compoundChild="true" collisionMask="16781578" density="0.0001" nodeId="38" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="6" name="colChunk_back_left" compoundChild="true" collisionMask="12552" nodeId="39" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="7" name="colChunk_back_center" compoundChild="true" collisionMask="12288" nodeId="40" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="8" name="colChunk_back_right" compoundChild="true" collisionMask="12552" nodeId="41" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="9" name="colChunk_center_left" compoundChild="true" collisionMask="12288" nodeId="42" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="10" name="colChunk_center_right" compoundChild="true" collisionMask="12288" nodeId="43" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="11" name="colChunk_front_left" compoundChild="true" collisionMask="12552" nodeId="44" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="12" name="colChunk_front_center" compoundChild="true" collisionMask="12288" nodeId="45" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="13" name="colChunk_front_right" compoundChild="true" collisionMask="12552" nodeId="46" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="14" name="solidCol" translation="0 1.19505 -0.488732" compoundChild="true" collisionMask="16781578" density="0.0001" nodeId="65" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="content" nodeId="47">
+          <TransformGroup name="transform" translation="0 -0.0260027 -1.17928" nodeId="48">
+            <TransformGroup name="lights" translation="0 -0.0585008 1.26621" nodeId="49">
+              <TransformGroup name="staticLights" translation="0 0.0585008 -1.26621" nodeId="50">
+                <Shape shapeId="15" name="defaultLights_static" translation="2.75393e-07 0.712859 1.26848" clipDistance="350" nodeId="51" materialIds="8" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="16" name="turnLightLeft_static" translation="2.75393e-07 0.712859 1.26848" clipDistance="350" nodeId="52" materialIds="8" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="17" name="turnLightRight_static" translation="2.75393e-07 0.712859 1.26848" clipDistance="350" nodeId="53" materialIds="8" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="18" name="brakeLights_static" translation="2.75393e-07 0.712859 1.26848" clipDistance="350" nodeId="54" materialIds="8" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="vehicle01" nodeId="55" lodDistance="0 50">
+              <Shape shapeId="19" name="LOD0" translation="0 0.749383 1.21404" clipDistance="300" nodeId="56" materialIds="7" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="20" name="LOD1" translation="2.75393e-07 0.749383 1.21404" clipDistance="300" nodeId="57" materialIds="7" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="contentCols" visibility="false" nodeId="58">
+          <Shape shapeId="21" name="tireBoxCol01" translation="0 1.24522 -0.454765" rotation="0 0 90" compoundChild="true" nodeId="59" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="22" name="vehicle01" translation="0 -0.0260027 -1.17928" static="true" compoundChild="true" collisionMask="28704" clipDistance="350" nodeId="60" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="triggers" nodeId="61">
+          <Shape shapeId="23" name="fillTrigger" translation="0 0.348315 0" visibility="false" kinematic="true" compound="true" trigger="true" collisionMask="1075838976" clipDistance="300" nodeId="62" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+      </Shape>
+  </Scene>
+
+</i3D>

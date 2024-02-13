@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Copper Pure Pallet</name>
+        <image>fillPlanesTP/fruit_tp_hud/hud_fill_copper.dds</image>
+        <category>pallets</category>
+        <brand>LIZARD</brand>
+        <showInStore>false</showInStore>
+		<price>2500</price>
+        <canBeSold>false</canBeSold>
+        <financeCategory>OTHER</financeCategory>
+        <vertexBufferMemoryUsage>58624</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>11520</indexBufferMemoryUsage>
+        <textureMemoryUsage>2031616</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_pallet</typeDesc>
+        <filename>pallet/barsPallet/barsPallet.i3d</filename>
+        <size width="1.4" length="1" height="0.8" />
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="420"/>
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false" />
+    </base>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="COPPER" capacity="1000" >
+                        <fillLevelAnimation name="animation" resetOnEmpty="true" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="dischargeNode" emptySpeed="150" fillUnitIndex="1" maxDistance="6" canStartDischargeAutomatically="true" playSound="false"/>
+    </dischargeable>
+
+    <pallet fillUnitIndex="1" node="pallet_vis">
+        <content>
+            <object node="bar1"/>
+            <object node="bar2"/>
+            <object node="bar3"/>
+            <object node="straps"/>
+        </content>
+
+        <sounds>
+            <unload template="clackVar6" pitchScale="0.9" />
+        </sounds>
+    </pallet>
+	
+	
+	<tensionBeltObject>
+        <meshNodes>
+            <meshNode node="0>0|3|2"/>
+        </meshNodes>
+    </tensionBeltObject>  
+
+
+    <dynamicMount triggerNode="dynamicMountTrigger" triggerForceAcceleration="4" additionalMountDistance="0.7" jointTransY="0.11" jointLimitToRotY="true"/>
+   <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart filename="pallet/barsPallet/bars_dynamic.i3d" node="1" linkNode="bar1" />
+        <dynamicallyLoadedPart filename="pallet/barsPallet/bars_dynamic.i3d" node="1" linkNode="bar2" />
+        <dynamicallyLoadedPart filename="pallet/barsPallet/bars_dynamic.i3d" node="1" linkNode="bar3" />
+    </dynamicallyLoadedParts>
+    <i3dMappings>
+        <i3dMapping id="barsPallet_component1" node="0>" />
+        <i3dMapping id="pallet_vis" node="0>0" />
+        <i3dMapping id="dynamicMountTrigger" node="0>0|0" />
+        <i3dMapping id="dischargeNode" node="0>0|1" />
+        <i3dMapping id="bar1" node="0>0|2|0" />
+        <i3dMapping id="bar2" node="0>0|2|1" />
+        <i3dMapping id="bar3" node="0>0|2|2" />
+        <i3dMapping id="straps" node="0>0|2|3" />
+
+    </i3dMappings>
+</vehicle>

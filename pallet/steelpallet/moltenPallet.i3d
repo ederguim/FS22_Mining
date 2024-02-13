@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="bakeryBoxPallet" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="7" filename="$data/shaders/flagShader.xml"/>
+    <File fileId="8" filename="$data/shaders/glowShader.xml"/>
+    <File fileId="9" filename="STEELSCRAP_diffuse.dds"/>
+    <File fileId="4" filename="Slag_pot_diffuse.png"/>
+    <File fileId="5" filename="Slag_pot_normal.png"/>
+    <File fileId="6" filename="Slag_pot_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="col" materialId="30" diffuseColor="0.8 0.8 0.8 1" specularColor="1 1 1">
+    </Material>
+    <Material name="lambert1" materialId="31">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="lambert1" materialId="6" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="MoltenMaterial" materialId="32" alphaBlending="true" customShaderId="7">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5" bumpDepth="0.15"/>
+      <Glossmap fileId="6"/>
+      <Emissivemap fileId="4"/>
+      <CustomParameter name="displacementSpeedFrequency" value="0.5 0.25 0.25 2"/>
+    </Material>
+    <Material name="MoltenMaterialLIGHT" materialId="33" customShaderId="8" customShaderVariation="slider">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+      <CustomParameter name="lightControl" value="1 0 0 0"/>
+      <CustomParameter name="sliderPos" value="1 0 0 0"/>
+    </Material>
+    <Material name="PR0183_Pot" materialId="34">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="35" diffuseColor="1 1 1 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="moltenPallet.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="moltenPallet_component1" dynamic="true" compound="true" collisionMask="2109442" density="0.0001" clipDistance="200" nodeId="46" materialIds="35" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <TransformGroup name="vis" nodeId="47"/>
+        <Shape shapeId="2" name="dynamicMountTrigger" translation="0 0.051145 0" kinematic="true" trigger="true" collisionMask="134217728" nodeId="48" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="dischargeNode" translation="0 0.281379 0" nodeId="49"/>
+        <TransformGroup name="cols" visibility="false" clipDistance="10" nodeId="50">
+          <Shape shapeId="3" name="solidCol" translation="0 0.568882 0" compoundChild="true" collisionMask="16781578" density="0.0001" nodeId="51" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="4" name="Col" compoundChild="true" collisionMask="16781578" nodeId="52" materialIds="30" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="content" nodeId="53">
+          <Shape shapeId="5" name="SlagPot_vis" scale="0.3 0.3 0.3" clipDistance="300" nodeId="54" materialIds="34" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="6" name="movmagma" translation="0 1.45219 0" clipDistance="300" nodeId="55" materialIds="32" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="6" name="lightmagma" translation="-0 2.42139 0.000647" visibility="false" clipDistance="300" nodeId="56" materialIds="33" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="contentCols" visibility="false" nodeId="57"/>
+        <TransformGroup name="fillUnit" nodeId="58">
+          <Shape shapeId="7" name="exactFillRootNode" translation="0 0.745884 0" kinematic="true" collisionMask="1073741824" nodeId="59" materialIds="31" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="8" name="fillTrigger" translation="0 0.348315 0" visibility="false" kinematic="true" compound="true" trigger="true" collisionMask="1073741824" clipDistance="300" nodeId="60" materialIds="31" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="9" name="fillVolume" visibility="false" nodeId="61" materialIds="31" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+      </Shape>
+  </Scene>
+
+</i3D>

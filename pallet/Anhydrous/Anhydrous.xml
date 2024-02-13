@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <storeData>
+        <name>
+            <en>Anhydrous</en></name>
+        <functions>
+            <function>$l10n_function_fertilizerTank</function>
+        </functions>
+        <specs>
+            <capacity>2000</capacity>
+            <fillTypes>ANHYDROUS</fillTypes>
+            <weight ignore="true"/>
+        </specs>
+        <image>objects/Anhydrous/store_fertilizerTank.dds</image>
+        <price>2400</price>
+        <allowLeasing>false</allowLeasing>
+		<showInStore>false</showInStore>		
+        <canBeSold>false</canBeSold>
+        <rotation>0</rotation>
+        <shopHeight>2</shopHeight>
+        <brand>CORTEVA</brand>
+        <category>pallets</category>
+        <financeCategory>PURCHASE_FERTILIZER</financeCategory>
+        <vertexBufferMemoryUsage>89344</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>19456</indexBufferMemoryUsage>
+        <textureMemoryUsage>1769472</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <storeIconRendering>
+            <settings cameraXRot="-15" cameraYRot="25"/>
+        </storeIconRendering>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+    <base>
+        <typeDesc>$l10n_typeDesc_pallet</typeDesc>
+        <filename>pallet/Anhydrous/liquidTank.i3d</filename>
+        <size width="2" length="2" lengthOffset="0"/>
+        <input allowed="false"/>
+        <canBeReset>false</canBeReset>
+        <components maxMass="850">
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="100"/>
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false"/>
+    </base>
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="ANHYDROUS" capacity="2000">
+                        <fillRootNode node="0>"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+    <fillTriggerVehicle triggerNode="fillTrigger" fillUnitIndex="1" litersPerSecond="500"/>
+    <dynamicMount triggerNode="dynamicMountTrigger"/>
+    <dischargeable requiresTipOcclusionArea="false"/>
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="fertilizerTank_vis"/>
+        </meshNodes>
+    </tensionBeltObject>
+    <i3dMappings>
+        <i3dMapping id="dynamicMountTrigger" node="0>0|0"/>
+        <i3dMapping id="fillTrigger" node="0>0|1"/>
+        <i3dMapping id="fertilizerTank_vis" node="0>2|0"/>
+        <i3dMapping id="materialHerbicide" node="0>2|1"/>
+    </i3dMappings>
+</vehicle>

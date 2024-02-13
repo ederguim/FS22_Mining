@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="64">
+    <author>Hazmat</author>
+	===================================================
+    <version>2.0.0.0</version>
+	===================================================
+    <title>
+        <en>Mining Package V1</en>
+		
+    </title>
+	===================================================
+    <description>
+        <en>Mining Package V1</en>
+		
+    </description>
+	===================================================
+    <iconFilename>store.dds</iconFilename>
+	===================================================
+    <multiplayer supported="true" />
+	===================================================
+    <storeItems>
+		<storeItem xmlFilename="washplant.xml"/>
+		<storeItem xmlFilename="washplant.xml" />
+		<storeItem xmlFilename="goldWashRoom.xml" />
+		<storeItem xmlFilename="goldSmelter.xml" />
+		<storeItem xmlFilename="sellingStation.xml"/>
+		<storeItem xmlFilename="pallets/goldBarPallet/goldBarPallet.xml" />		
+		<storeItem xmlFilename="pallets/goldSafe/goldSafe.xml" />	
+		<storeItem xmlFilename="pallets/goldPallet/goldPallet.xml" />
+		<!--<storeItem xmlFilename="pallet/goldPallet/goldPallet.xml"/>-->
+		<storeItem xmlFilename="pallet/concentratePallet/concentratePallet.xml"/>
+		<storeItem xmlFilename="pallet/steelrollPallet/steelrollPallet.xml"/>
+		<storeItem xmlFilename="pallet/pipePallet/pipePallet.xml"/>
+		<storeItem xmlFilename="pallet/rubyPallet/rubyPallet.xml"/>
+		<storeItem xmlFilename="pallet/gemdirtPallet/gemdirtPallet.xml"/>
+		<storeItem xmlFilename="pallet/diamondPallet/diamondPallet.xml"/>
+		<storeItem xmlFilename="pallet/emeraldPallet/emeraldPallet.xml"/>
+		<storeItem xmlFilename="pallet/sapphirePallet/sapphirePallet.xml"/>
+		<storeItem xmlFilename="pallet/opalPallet/opalPallet.xml"/>
+		<storeItem xmlFilename="pallet/sunstonePallet/sunstonePallet.xml"/>
+		<storeItem xmlFilename="pallet/tanzanitePallet/tanzanitePallet.xml"/>
+		<storeItem xmlFilename="pallet/Anhydrous/Anhydrous.xml"/>
+		<storeItem xmlFilename="pallet/crudePallet/crudePallet.xml"/>
+		<storeItem xmlFilename="pallet/dieselPallet/dieselPallet.xml"/>
+		<storeItem xmlFilename="pallet/barrelPallet/ethanolPallet.xml"/>
+		<storeItem xmlFilename="pallet/barrelPallet/vodkaPallet.xml"/>
+		<storeItem xmlFilename="pallet/barrelPallet/whiskeyPallet.xml"/>
+		<storeItem xmlFilename="pallet/barrelPallet/winePallet.xml"/>
+		<storeItem xmlFilename="pallet/barsPallet/copperPallet.xml"/>
+		<storeItem xmlFilename="pallet/barsPallet/brassPallet.xml"/>
+		<storeItem xmlFilename="pallet/barsPallet/leadPallet.xml"/>
+		<storeItem xmlFilename="pallet/barsPallet/aluminiumPallet.xml"/>
+		<storeItem xmlFilename="pallet/barsPallet/goldbarsPallet.xml"/>
+		<storeItem xmlFilename="pallet/chemicalPallet/potassiumPallet.xml"/>
+		<storeItem xmlFilename="pallet/chemicalPallet/sulfuraPallet.xml"/>
+		<storeItem xmlFilename="pallet/naphthaPallet/naphthaPallet.xml"/>
+		<storeItem xmlFilename="pallet/plasticsPallet/plasticsPallet.xml"/>
+		<storeItem xmlFilename="pallet/greasePallet/greasePallet.xml"/>
+		<storeItem xmlFilename="pallet/wastePallet/wastePallet.xml"/>
+		<storeItem xmlFilename="pallet/lithiumPallet/lithiumPallet.xml"/>
+		<storeItem xmlFilename="pallet/partsPallet/partsPallet.xml"/>
+		<storeItem xmlFilename="pallet/toolsPallet/toolsPallet.xml"/>
+		<storeItem xmlFilename="pallet/methanePallet/methanePallet.xml"/>
+		<storeItem xmlFilename="pallet/methanePallet/propanePallet.xml"/>
+		<storeItem xmlFilename="pallet/barsPallet/zincPallet.xml"/>
+		<storeItem xmlFilename="pallet/scrapPallet/scrapPallet.xml"/>
+		<storeItem xmlFilename="pallet/scrapPallet/scrapPalletbuy.xml"/>
+		<storeItem xmlFilename="pallet/scrapPallet/scrap2Pallet.xml"/>
+		<storeItem xmlFilename="pallet/steelPallet/iBeamPallet.xml"/>
+		<storeItem xmlFilename="pallet/rubberPallet/rubberPallet.xml"/>
+    </storeItems>
+	===============================================================	
+	<densityMapHeightTypes filename="fillPlanesTP/maps_densityMapHeightTypes.xml" />
+	<fillTypes filename="newfilltypes.xml" />
+	<brands>
+        Lizard
+    </brands>
+</modDesc>
