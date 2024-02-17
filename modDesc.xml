@@ -19,16 +19,17 @@
     <multiplayer supported="true" />
 	===================================================
     <storeItems>
+	
 		<storeItem xmlFilename="washplant.xml"/>
-		<storeItem xmlFilename="washplant.xml" />
 		<storeItem xmlFilename="goldWashRoom.xml" />
+		<storeItem xmlFilename="goldWashRoom2.xml" />
 		<storeItem xmlFilename="goldSmelter.xml" />
+		<storeItem xmlFilename="goldSmelter2.xml" />
 		<storeItem xmlFilename="sellingStation.xml"/>
 		<storeItem xmlFilename="pallets/goldBarPallet/goldBarPallet.xml" />		
 		<storeItem xmlFilename="pallets/goldSafe/goldSafe.xml" />	
 		<storeItem xmlFilename="pallets/goldPallet/goldPallet.xml" />
-		<!--<storeItem xmlFilename="pallet/goldPallet/goldPallet.xml"/>-->
-		<storeItem xmlFilename="pallet/concentratePallet/concentratePallet.xml"/>
+		<storeItem xmlFilename="pallets/concentrateBucket/concentratePallet.xml"/>
 		<storeItem xmlFilename="pallet/steelrollPallet/steelrollPallet.xml"/>
 		<storeItem xmlFilename="pallet/pipePallet/pipePallet.xml"/>
 		<storeItem xmlFilename="pallet/rubyPallet/rubyPallet.xml"/>

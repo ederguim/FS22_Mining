@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="goldWashRoom2.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+  </Asset>
+
+  <Files>
+    <File fileId="9" filename="$data/shaders/uvScrollShader.xml"/>
+    <File fileId="4" filename="textures/Tremis.png"/>
+    <File fileId="5" filename="textures/bunker_diffuse.dds"/>
+    <File fileId="6" filename="textures/bunker_normal.dds"/>
+    <File fileId="7" filename="textures/bunker_specular.dds"/>
+    <File fileId="2" filename="textures/central.dds"/>
+    <File fileId="10" filename="textures/diesel_generator_diffuse.png"/>
+    <File fileId="11" filename="textures/diesel_generator_normal.png"/>
+    <File fileId="12" filename="textures/diesel_generator_specular.png"/>
+    <File fileId="8" filename="textures/kette.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="acmat_0" materialId="6">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+    </Material>
+    <Material name="Box" materialId="12" specularColor="0.494118 1 0.494118">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="bunker_mat" materialId="13">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="lambert1" materialId="23" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="Mat002" materialId="36">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="treeScape_mat" materialId="46" customShaderId="9">
+      <Texture fileId="8"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="goldWashRoom2.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="goldprocessor1" nodeId="139">
+        <TransformGroup name="clearAreas" nodeId="140">
+          <TransformGroup name="clearArea1Start" translation="-13.6028 -0.0037877 -19.8804" nodeId="141">
+            <TransformGroup name="clearArea1Width" translation="0 0 43" nodeId="142"/>
+            <TransformGroup name="clearArea1Height" translation="25.6044 0 0" nodeId="143"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="levelAreas" nodeId="144">
+          <TransformGroup name="levelArea1Start" translation="-8.95495 -0.0162081 -13.4296" nodeId="145">
+            <TransformGroup name="levelArea1Width" translation="-1.13687e-15 0 36.3917" nodeId="146"/>
+            <TransformGroup name="levelArea1Height" translation="18.0061 0 0" nodeId="147"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="indoorAreas" nodeId="148">
+          <TransformGroup name="indoorArea1Start" translation="-8.45051 0.0235319 -12.8196" nodeId="149">
+            <TransformGroup name="indoorArea1Width" translation="0 0 24.8635" nodeId="150"/>
+            <TransformGroup name="indoorArea1Height" translation="16.8048 0 -5.68434e-16" nodeId="151"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape shapeId="1" name="infoTrigger" visibility="false" static="true" trigger="true" collisionMask="1048576" nodeId="152" materialIds="23" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="tipOcclusionUpdateAreas" nodeId="153">
+          <TransformGroup name="tipOcclusionUpdateArea1Start" translation="-8.86897 0.0235322 -13.1392" nodeId="154">
+            <TransformGroup name="tipOcclusionUpdateArea1End" translation="17.7705 -0.00162667 29.8767" nodeId="155"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="collisions" nodeId="156">
+          <Shape shapeId="2" name="tipCol" visibility="false" static="true" collisionMask="524288" density="0.0001" nodeId="157" materialIds="23" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="sellingStation" nodeId="158">
+          <Shape shapeId="3" name="unloadTrigger" translation="0 0 17.542" static="true" trigger="true" collisionMask="1073741824" nodeId="159" materialIds="23" castsShadows="true" receiveShadows="true" nonRenderable="true">
+            <TransformGroup name="grainGateLinkNode" translation="0 0 -9.98678" rotation="-0 90 0" nodeId="160"/>
+            <TransformGroup name="unloadTriggerMarker" translation="0 0 -10.6929" static="true" collisionMask="1073742079" nodeId="161"/>
+          </Shape>
+          <TransformGroup name="teleportNode" translation="0 0 -12.4701" nodeId="162"/>
+          <TransformGroup name="aiNode" translation="-1.04306e-06 -1.04306e-06 -11.9313" rotation="180 -5.00896e-06 180" nodeId="163"/>
+        </TransformGroup>
+        <TransformGroup name="productionPoint" nodeId="164">
+          <Shape shapeId="4" name="playerTrigger" translation="1.3312 0 0" static="true" trigger="true" collisionMask="3145728" clipDistance="600" nodeId="165" materialIds="23" castsShadows="true" receiveShadows="true" nonRenderable="true">
+            <TransformGroup name="playerTriggerMarker" translation="-5.42499 0 -1.52585" nodeId="166"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="palletSpawner" nodeId="167">
+          <TransformGroup name="spawnSpace1start" translation="-3.5 0.0315304 -9.41661" nodeId="168">
+            <TransformGroup name="spawnSpace1end" translation="8 0 0" nodeId="169"/>
+          </TransformGroup>
+          <TransformGroup name="spawnSpace2start" translation="-3.5 0 -5.86827" nodeId="170">
+            <TransformGroup name="spawnSpace2end" translation="8 0 0" nodeId="171"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="sellingStation" rotation="0 90 0" nodeId="172">
+          <Shape shapeId="5" name="unloadTrigger" static="true" trigger="true" collisionMask="1075838976" nodeId="173" materialIds="23" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <TransformGroup name="unloadTriggerMarker" translation="-18.228 0 -6.26836" nodeId="174"/>
+          <TransformGroup name="unloadTriggerAINode" translation="-18.2674 0 -5.73308" nodeId="175"/>
+        </TransformGroup>
+        <TransformGroup name="goldWashPlant" rotation="180 89.568 180" clipDistance="300" nodeId="176">
+          <TransformGroup name="texturas" translation="-7.37645 0.196896 3.29664" rotation="-1.364 18.6464 -4.25909" nodeId="245">
+            <Shape shapeId="6" name="1m x 0.5m adStrip" rotation="-83.5592 -19.6086 -18.4384" clipDistance="300" nodeId="246" materialIds="12" receiveShadows="true"/>
+            <Shape shapeId="7" name="1m x 0.5m adStrip" rotation="-83.5592 -19.6086 -18.4384" clipDistance="300" nodeId="247" materialIds="12" receiveShadows="true"/>
+            <Shape shapeId="8" name="1m x 0.5m adStrip" rotation="-83.5592 -19.6086 -18.4384" clipDistance="300" nodeId="248" materialIds="12" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="texturas" rotation="-180 65.1653 -180" nodeId="249"/>
+          <TransformGroup name="StorageSilos" rotation="0 -84.7273 0" clipDistance="400" nodeId="250">
+            <TransformGroup name="Cal" rotation="0 -4.6422 0" nodeId="251"/>
+          </TransformGroup>
+          <TransformGroup name="britadeira" rotation="-180 52.18 180" scale="3 3 3" clipDistance="300" nodeId="252">
+            <Shape shapeId="9" name="Objcarriere1" translation="0.379777 -0.159461 -2.31713" rotation="-4.4761e-11 -38.5387 -1.34877e-05" static="true" clipDistance="150" nodeId="253" materialIds="36" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <Shape shapeId="10" name="1" rotation="-159.349 84.8748 175.573" scale="0.19 0.2 0.2" nodeId="254" materialIds="13" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="Rolls" clipDistance="250" nodeId="255">
+              <Shape shapeId="11" name="Walze1" clipDistance="65" nodeId="256" materialIds="13" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="12" name="Walze2" clipDistance="65" nodeId="257" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+            <Shape shapeId="13" name="kratzboden" clipDistance="250" nodeId="258" materialIds="46"/>
+          </Shape>
+          <Shape shapeId="14" name="diesel_generator" translation="0 -0.0832049 0" scale="1.5 1.7 1.5" static="true" clipDistance="300" nodeId="265" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <TransformGroup name="shaderSmall" rotation="-121.985 85.7558 -149.322" nodeId="266"/>
+        </TransformGroup>
+      </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="139">
+      <Attribute name="farmlandId" type="integer" value="60"/>
+      <Attribute name="indexName" type="string" value="GOLDPROCESSOR"/>
+      <Attribute name="onCreate" type="scriptCallback" value="GC_ProductionFactory.onCreate"/>
+      <Attribute name="xmlFile" type="string" value="maps/placeables/goldprocessor/goldprocessor2.xml"/>
+    </UserAttribute>
+    <UserAttribute nodeId="250">
+      <Attribute name="mapPositionIndex" type="string" value="0|3"/>
+    </UserAttribute>
+    <UserAttribute nodeId="255">
+      <Attribute name="feederType" type="string" value="silage"/>
+    </UserAttribute>
+    <UserAttribute nodeId="256">
+      <Attribute name="RollSpeed_x_y_z" type="string" value="0.12 0 0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="257">
+      <Attribute name="RollSpeed_x_y_z" type="string" value="0.09 0 0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="258">
+      <Attribute name="feederType" type="string" value="silage"/>
+      <Attribute name="scrollSpeed" type="string" value="0.07 0"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

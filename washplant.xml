@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>Gold Washplant V2</name>
+        <name>Gold Washplant Mining</name>
         <image>store.png</image>
         <price>96000</price>
 		<canBeSold>true</canBeSold>
@@ -70,71 +70,71 @@
 
     <productionPoint>
         <productions sharedThroughputCapacity="false">
-			<production id="STONE" name="Stone" params="l10n_fillType_concentrate | l10n_fillType_stone | l10n_fillType_dirt |l10n_fillType_tailings" cyclesPerHour="15" costsPerActiveHour="1000">
+			<production id="STONE" name="Pedra" params="l10n_fillType_concentrate | l10n_fillType_stone | l10n_fillType_dirt |l10n_fillType_tailings" cyclesPerHour="5" costsPerActiveHour="1000">
                 <inputs>
                     <input fillType="STONE" amount="17000" />
 					<input fillType="DIESEL" amount="300" />
                 </inputs>
                 <outputs>
-					<output fillType="TAILINGS" amount="15500" />
-                    <output fillType="CONCENTRATE"  amount="1000" />
-                    <output fillType="GEMDIRT"  amount="500" />
+					<output fillType="TAILINGS" amount="16450" />
+                    <output fillType="CONCENTRATE"  amount="100" />
+                    <output fillType="GEMDIRT"  amount="450" />
                 </outputs>
             </production>
 
-            <production id="DIRT" name="Dirt"  cyclesPerHour="15" costsPerActiveHour="1000">
+            <production id="DIRT" name="Terra"  cyclesPerHour="5" costsPerActiveHour="1000">
                 <inputs>
                     <input fillType="DIRT" amount="14000" />
 					<input fillType="DIESEL" amount="300" />
                 </inputs>
                 <outputs>
-					<output fillType="TAILINGS" amount="12500" />
-                    <output fillType="CONCENTRATE"  amount="1000" />
-                    <output fillType="GEMDIRT"  amount="500" />
+					<output fillType="TAILINGS" amount="13450" />
+                    <output fillType="CONCENTRATE"  amount="100" />
+                    <output fillType="GEMDIRT"  amount="450" />
                 </outputs>
             </production>
 		
-            <production id="CONCASSE" name="Concasse" params="l10n_fillType_concentrate | l10n_fillType_stone | l10n_fillType_gemdirt |l10n_fillType_tailings" cyclesPerHour="15" costsPerActiveHour="1000">
+            <production id="CONCASSE" name="Pedra Azura" params="l10n_fillType_concentrate | l10n_fillType_stone | l10n_fillType_gemdirt |l10n_fillType_tailings" cyclesPerHour="5" costsPerActiveHour="1000">
                 <inputs>
                     <input fillType="CONCASSE" amount="17000"/>
 					<input fillType="DIESEL" amount="300"/>
                 </inputs>
                 <outputs>
-					<output fillType="TAILINGS" amount="15500" />
-                    <output fillType="CONCENTRATE"  amount="1000" />
-                    <output fillType="GEMDIRT"  amount="500" />
+					<output fillType="TAILINGS" amount="16450" />
+                    <output fillType="CONCENTRATE"  amount="100" />
+                    <output fillType="GEMDIRT"  amount="450" />
                 </outputs>
             </production>
 
-            <production id="GemDirt" name="GemDirt"  cyclesPerHour="15" costsPerActiveHour="1000">
+            <production id="GemDirt" name="Terra Azura"  cyclesPerHour="5" costsPerActiveHour="1000">
                 <inputs>
                     <input fillType="DIRT1" amount="14000"/>
 					<input fillType="DIESEL" amount="300"/>
                 </inputs>
                 <outputs>
-					<output fillType="TAILINGS" amount="12500" />
-                    <output fillType="CONCENTRATE"  amount="1000" />
-                    <output fillType="GEMDIRT"  amount="500" />
+					<output fillType="TAILINGS" amount="13450" />
+                    <output fillType="CONCENTRATE"  amount="100" />
+                    <output fillType="GEMDIRT"  amount="450" />
                 </outputs>
             </production>
 
         </productions>
 
         <storage isExtension="false" fillLevelSyncThreshold="100" >
-            <capacity fillType="CONCASSE"   capacity="50000" />
-            <capacity fillType="DIRT1"   capacity="50000" />
-			<capacity fillType="STONE"   capacity="50000" />
-            <capacity fillType="DIRT"   capacity="50000" />
+            <capacity fillType="CONCASSE"   capacity="5000" />
+            <capacity fillType="DIRT1"   capacity="500000" />
+			<capacity fillType="STONE"   capacity="500000" />
+            <capacity fillType="DIRT"   capacity="500000" />
 
 			<capacity fillType="DIESEL"   capacity="5000" />
-			<capacity fillType="TAILINGS"   capacity="50000" />
+			<capacity fillType="TAILINGS"   capacity="500000" />
             <fillPlane fillType="TAILINGS" node="tailingsHill" minY="-3.25" maxY="0" />
-            <capacity fillType="CONCENTRATE"   capacity="10000" />
-            <capacity fillType="GEMDIRT"   capacity="10000" />
+            <capacity fillType="CONCENTRATE"   capacity="5000" />
+            <capacity fillType="GEMDIRT"   capacity="500000" />
         </storage>
 
         <sellingStation node="CONCASSE" supportsExtension="false">
-            <unloadTrigger exactFillRootNode="unloadTrigger" fillTypes="CONCASSE DIRT1" priceScale=".5" aiNode="aiNode" />
+            <unloadTrigger exactFillRootNode="unloadTrigger" fillTypes="CONCASSE DIRT1 DIRT STONE" priceScale=".5" aiNode="aiNode" />
 			<unloadTrigger exactFillRootNode="unloadTrigger2" fillTypes="DIESEL" priceScale=".5"  aiNode="aiNode2" />
         </sellingStation>
 		

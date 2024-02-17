@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CustomShader version="5">
+    <Parameters/>
+    <UvUsages/>
+    <Textures/>
+    <Variations/>
+    <LodLevel startDistance="0">
+        <CodeInjections>
+            <CodeInjection position="CONFIG_DEFINES">
+<![CDATA[
+#define PARTICLE_SYSTEM
+#undef PARTICLE_SYSTEM_BILLBOARD
+]]>
+            </CodeInjection>
+            <CodeInjection position = "LIB_FUNCTION_VS">
+<![CDATA[
+// Custom vertex functions
+float getIndex(VS_INPUT In, ObjectParameters& object){
+    // use uv0.x instead of mergeChildren
+    // like in vehicleShader, only without vertical support
+    // so maximum amount of pieces is 8
+    return floor(getDefaultTexCoords(In, object).x); // 0,1,2 ... 7
+}
+float4 eulerToQuaternionRX(float rx){
+    float4 q;
+    q.w = cos(rx*0.5);
+    q.x = 0;
+    q.y = 0;
+    q.z = sin(rx*0.5);
+    return q;
+}
+float4 eulerToQuaternionRY(float ry){
+    float4 q;
+    q.w = cos(ry*0.5);
+    q.x = 0;
+    q.y = sin(ry*0.5);
+    q.z = 0;
+    return q;
+}
+float4 eulerToQuaternionRZ(float rz){
+    float4 q;
+    q.w = cos(rz*0.5);
+    q.x = sin(rz*0.5);
+    q.y = 0;
+    q.z = 0;
+    return q;
+}
+float4 QuaternionMultiply(float4 a, float4 b){
+    float4 q;
+    q.w = a.w*b.w - a.x*b.x - a.y*b.y - a.z*b.z;
+    q.x = a.w*b.x + a.x*b.w + a.y*b.z - a.z*b.y;
+    q.y = a.w*b.y - a.x*b.z + a.y*b.w + a.z*b.x;
+    q.z = a.w*b.z + a.x*b.y - a.y*b.x + a.z*b.w;
+    return q;
+}
+float3 getQuaternionPos( float4 mQr, float3 mPos ){
+    float3 mQ = float3(mQr.x,mQr.y,mQr.z);
+    float3 mDeformPos = mPos + 2.0 * cross( mQ, cross(mQ, mPos) + mQr.w*mPos );
+    return mDeformPos;
+}
+float4 getInitOrient( VS_INPUT In, ObjectParameters& object ){
+    // random mRZ calculted in GET_PARTICLE_ROTATION_VS
+    // 2*pi == 6.283185
+    float randX = 6.283185 * frac(In.texCoords1.y * 25.7101);
+    float randY = 6.283185 * frac(In.texCoords1.y * 12.5203);
+    float4 mRX = eulerToQuaternionRX(randX);
+    float4 mRY = eulerToQuaternionRY(randY);
+    return QuaternionMultiply(mRX,mRY);
+}
+]]>
+            </CodeInjection>
+            <CodeInjection position = "VS_INPUT">
+<![CDATA[
+    float4 gInitOrient;
+]]>
+            </CodeInjection>
+            <CodeInjection position = "FILL_VERTEX_INPUT_VS">
+<![CDATA[
+    In.gInitOrient = getInitOrient(In, object);
+]]>
+            </CodeInjection>
+            <CodeInjection position = "TRANSFORM_PARTICLE_VECTOR_VS">
+<![CDATA[
+    // float3 centerPosition - In.blendWeights.xyz
+    // float3 v              - In.normal.xyz*2 - 1
+    // float  rotation       - getParticleRotation(In, object)
+    // object.modelMatrix is camera position centered
+
+    // pre-rotate the vector (rotate along velocity vector)
+    float3 mV = v;
+    float4 mRotQuat = eulerToQuaternionRZ(rotation);
+    if (object.particleRotInit > 0){
+        mV = getQuaternionPos( In.gInitOrient, mV );
+    }
+    mV = getQuaternionPos( mRotQuat, mV );
+    
+    // orient towards velocity vector
+    float3 mUpDirPrediction = mul((float3x3)object.modelMatrix, centerPosition);
+    float3 mVelDir       = In.texCoords2.xyz*2 - 1;
+    float3 mSideVector   = normalize(cross(mUpDirPrediction, mVelDir));
+    float3 mUpVector     = normalize(cross(mVelDir, mSideVector));
+    // velocity vector rotation matrix 
+    float3x3 rotMat = float3x3(mSideVector,mUpVector,mVelDir);
+
+    mV = mul(mV, rotMat);
+    mV = mul((float3x3)object.modelMatrix, mV);
+    return mV;
+]]>
+            </CodeInjection>
+            <CodeInjection position = "TRANSFORM_PARTICLE_POINT_VS">
+<![CDATA[
+    // float3 centerPosition - In.blendWeights.xyz
+    // float3 offsetPosition - In.position.xyz
+    // float3 halfSize       - getParticleHalfSize(In, object)
+    // float  rotation       - getParticleRotation(In, object)
+    // object.modelMatrix is camera position centered
+
+    // pre-rotate the vertices (rotate along velocity vector)
+    float3 mOffsetPosition  = offsetPosition * 2 * halfSize;
+    float4 mRotQuat = eulerToQuaternionRZ(rotation);
+    if (object.particleRotInit > 0){
+        mOffsetPosition = getQuaternionPos( In.gInitOrient, mOffsetPosition );
+    }
+    mOffsetPosition = getQuaternionPos( mRotQuat, mOffsetPosition );
+    
+    // orient towards velocity vector
+    float3 mUpDirPrediction = mul((float3x3)object.modelMatrix, centerPosition);
+    float3 mVelDir       = In.texCoords2.xyz*2 - 1;
+    float3 mSideVector   = normalize(cross(mUpDirPrediction, mVelDir));
+    float3 mUpVector     = normalize(cross(mVelDir, mSideVector));
+    // velocity vector rotation matrix 
+    float3x3 rotMat = float3x3(mSideVector,mUpVector,mVelDir);
+    
+    // rotate mOffsetPosition and than offset them by centerPosition
+    float3 mPos = centerPosition + mul(mOffsetPosition, rotMat);
+    mPos = mul(object.modelMatrix, float4(mPos, 1));
+    return mPos;
+]]>
+            </CodeInjection>
+            <CodeInjection position="VS_END">
+<![CDATA[
+    float index = floor(7.0 * In.texCoords1.y);
+    if (index != getIndex(In, object)){
+        Out.position = float4(0,0,0,-1); // hide the vertices 
+    }
+]]>
+            </CodeInjection>
+        </CodeInjections>
+    </LodLevel>
+</CustomShader>

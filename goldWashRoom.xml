@@ -68,7 +68,7 @@
         <productions sharedThroughputCapacity="false">
             <production id="GoldWashRoom" name="Gold Wash Room" params="" cyclesPerHour="15" costsPerActiveHour="1">
                 <inputs>
-                    <input fillType="CONCENTRATE" amount="1000" buyFactor="30"/>
+                    <input fillType="CONCENTRATE" amount="200" buyFactor="30"/>
 					<input fillType="DIESEL" amount="10" buyFactor="5"/>
                 </inputs>
                 <outputs>
@@ -78,9 +78,9 @@
         </productions>
 
         <storage isExtension="false" fillLevelSyncThreshold="50" >
-            <capacity fillType="CONCENTRATE"   capacity="10000" />
+            <capacity fillType="CONCENTRATE"   capacity="2000" />
 			<capacity fillType="DIESEL"   capacity="500" />
-            <capacity fillType="GOLD"   capacity="10" />
+            <capacity fillType="GOLD"   capacity="20" />
         </storage>
 
         <sellingStation node="concentrate" supportsExtension="false">

@@ -25,7 +25,7 @@
             <physics massPerLiter=".25" maxPhysicalSurfaceAngle="35" />
             <economy pricePerLiter="2" />
             <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_terra.png" />
-			 <pallet     filename="pallet/concentratePallet/concentratePallet.xml" />
+			 <pallet     filename="pallets/concentrateBucket/concentratePallet.xml" />
         </fillType>
 
 		<fillType name="STEELROLL" title="Steelroll" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
@@ -364,16 +364,71 @@
 	  </fillType>
 
 		<fillType name="STEEL_IBS" title="steelBeam" showOnPriceTable="true"  unitShort="$l10n_unit_literShort">
-            <physics massPerLiter=".6" maxPhysicalSurfaceAngle="35" />
-            <economy pricePerLiter="3.2" />
-            <image      hud     ="fillplanesTP/fruit_tp_hud/hud_fill_steelBeam.png" />
+			<physics massPerLiter=".6" maxPhysicalSurfaceAngle="35" />
+			<economy pricePerLiter="3.2" />
+			<image      hud     ="fillplanesTP/fruit_tp_hud/hud_fill_steelBeam.png" />
 			 <pallet     filename="pallet/steelPallet/iBeamPallet.xml" />
-        </fillType>
+		</fillType>
 		<fillType name="RUBBER" title="rubber" showOnPriceTable="true"  unitShort="$l10n_unit_literShort">
-            <physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
-            <economy pricePerLiter=".8" />
-            <image      hud     ="fillplanesTP/fruit_tp_hud/hud_fill_rubber.png" />
+			<physics massPerLiter=".3" maxPhysicalSurfaceAngle="35" />
+			<economy pricePerLiter=".8" />
+			<image      hud     ="fillplanesTP/fruit_tp_hud/hud_fill_rubber.png" />
 			 <pallet     filename="pallet/rubberPallet/rubberPallet.xml" />
+		</fillType>
+		
+		<fillType name="CONCASSE" title="CONCASSE" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+			<physics massPerLiter="0.53" maxPhysicalSurfaceAngle="25" />
+			<economy pricePerLiter="0.603" />
+			<image      hud     ="fillPlanesTP/fillPlanesTP/hud_fill_concasse.png" />
+			<textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/concasse_diffuse.png"
+						normal  ="fillPlanesTP/fruit_tp_ground_texture/concasse_normal.png"
+						specular="fillPlanesTP/fruit_tp_ground_texture/concasse_specular.png"
+						distance="fillPlanesTP/fruit_tp_ground_texture/concasseDistance_diffuse.png" />
+		</fillType>
+		
+		<fillType name="DIRT1" title="DIRT AZURA" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+			<physics massPerLiter="0" maxPhysicalSurfaceAngle="25" />
+			<economy pricePerLiter="0.532" />
+			<image      hud     ="fillPlanesTP/fillPlanesTP/hud_fill_dirt1.png" />
+			<textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/dirt1_diffuse.png"
+						normal  ="fillPlanesTP/fruit_tp_ground_texture/dirt1_normal.png"
+						specular="fillPlanesTP/fruit_tp_ground_texture/dirt1_specular.png"
+						distance="fillPlanesTP/fruit_tp_ground_texture/dirt1Distance_diffuse.png" />
+		</fillType>
+		
+		<fillType name="STONE" title="$l10n_fillType_stone" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.6" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.03" />
+            <image      hud     ="$dataS/menu/hud/fillTypes/hud_fill_stone.png" />
+            <textures   diffuse ="$data/fillPlanes/stone_diffuse.png"
+                        normal  ="$data/fillPlanes/stone_normal.png"
+                        specular="$data/fillPlanes/stone_specular.png"
+                        distance="$data/fillPlanes/distance/stoneDistance_diffuse.png" />
+        </fillType>
+		
+		<fillType name="DIRT" title="Dirt" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter=".75" maxPhysicalSurfaceAngle="35" />
+            <economy pricePerLiter="0.02" >
+			    <factors>
+                    <factor period="1"  value="0.88" />
+                    <factor period="2"  value="0.92" />
+                    <factor period="3"  value="1.02" />
+                    <factor period="4"  value="1.04" />
+                    <factor period="5"  value="1.10" />
+                    <factor period="6"  value="1.03" />
+                    <factor period="7"  value="1.01" />
+                    <factor period="8"  value="0.97" />
+                    <factor period="9"  value="0.95" />
+                    <factor period="10" value="0.93" />
+                    <factor period="11" value="0.91" />
+                    <factor period="12" value="0.90" />
+                </factors>
+			</economy>
+            <image      hud     ="fillPlanesTP/fillPlanesTP/hud_fill_dirt.png" />
+            <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/dirt_diffuse.dds"
+                        normal  ="fillPlanesTP/fruit_tp_ground_texture/dirt_normal.dds"
+                        specular="fillPlanesTP/fruit_tp_ground_texture/dirt_specular.png"
+                        distance="fillPlanesTP/fruit_tp_ground_texture/dirtDistance_diffuse.dds" />
         </fillType>
 		
 
@@ -382,17 +437,17 @@
 
 	</fillTypes>	
     <fillTypeCategories>
-		<fillTypeCategory name="DBPRODUCTS">ETHANOL VODKA    SCRAP SCRAP2 LITHIUM WHISKEY WINE DIRT CRUDEOIL DIESEL ANHYDROUS TANZANITE SUNSTONE OPAL PIPE SAPPHIRE EMERALD  DIAMOND RUBY GEMDIRT TAILINGS GOLD </fillTypeCategory>
+		<fillTypeCategory name="DBPRODUCTS">ETHANOL VODKA    SCRAP SCRAP2 LITHIUM WHISKEY WINE DIRT CRUDEOIL DIESEL ANHYDROUS TANZANITE SUNSTONE OPAL PIPE SAPPHIRE EMERALD  DIAMOND RUBY GEMDIRT TAILINGS GOLD CONCASSE DIRT1 STONE</fillTypeCategory>
         <fillTypeCategory name="LIQUID" >SULFURA MILK WATER POTASSIUM METHANE WASTE DIESEL DEF TAR CRUDEOIL NAPHTHA GREASE WASTE ETHANOL WHISKEY VODKA PROPANE ANHYDROUS</fillTypeCategory>
 		<fillTypeCategory name="PRODUCT">DIRT ETHANOL VODKA STEELROLL SCRAP2 TOOLS PARTS LITHIUM WASTE PLASTICS NAPHTHA GREASE SULFURA ZINC PROPANE METHANE POTASSIUM GOLDBAR ALUM LEAD BRASS COPPER WHISKEY WINE CRUDEOIL  DIESEL SUNSTONE ANHYDROUS TANZANITE OPAL PIPE SAPPHIRE DIAMOND EMERALD RUBY GEMDIRT TAILINGS GOLD</fillTypeCategory>
-		<fillTypeCategory name="BULK" >DIRT ETHANOL VODKA      SCRAP2  POTASSIUM ZINC PROPANE METHANE PARTS TOOLS LITHIUM WASTE PLASTICS NAPHTHA SULFURA POTASSIUM WHISKEY WINE CRUDEOIL OPAL DIESEL ANHYDROUS TANZANITE SUNSTONE PIPE RUBY SAPPHIRE DIAMOND EMERALD GEMDIRT TAILINGS GOLD</fillTypeCategory>
-		<fillTypeCategory name="SHOVEL" >DIRT ETHANOL   TOOLS PARTS WASTE GREASE VODKA WHISKEY WINE OPAL TANZANITE SUNSTONE PIPE RUBY SAPPHIRE DIAMOND EMERALD GEMDIRT TAILINGS GOLD</fillTypeCategory>
-		<fillTypeCategory name="TRAINWAGON" >DIRT ETHANOL     SCRAP SCRAP2  ZINC METHANE PROPANE TOOLS PARTS LITHIUM GREASE PLASTICS  NAPHTHA SULFURA POTASSIUM VODKA WHISKEY WINE OPAL PIPE DIESEL CRUDEOIL ANHYDROUS TANZANITE SUNSTONE RUBY SAPPHIRE DIAMOND EMERALD GEMDIRT CONCENTRATE TAILINGS GOLD</fillTypeCategory>
+		<fillTypeCategory name="BULK" >DIRT ETHANOL VODKA CONCASSE DIRT1 STONE SCRAP2  POTASSIUM ZINC PROPANE METHANE PARTS TOOLS LITHIUM WASTE PLASTICS NAPHTHA SULFURA POTASSIUM WHISKEY WINE CRUDEOIL OPAL DIESEL ANHYDROUS TANZANITE SUNSTONE PIPE RUBY SAPPHIRE DIAMOND EMERALD GEMDIRT TAILINGS GOLD</fillTypeCategory>
+		<fillTypeCategory name="SHOVEL" >DIRT ETHANOL TOOLS PARTS WASTE GREASE VODKA WHISKEY WINE OPAL TANZANITE SUNSTONE PIPE RUBY SAPPHIRE DIAMOND EMERALD GEMDIRT TAILINGS GOLD</fillTypeCategory>
+		<fillTypeCategory name="TRAINWAGON" >DIRT ETHANOL SCRAP SCRAP2  ZINC METHANE PROPANE TOOLS PARTS LITHIUM GREASE PLASTICS  NAPHTHA SULFURA POTASSIUM VODKA WHISKEY WINE OPAL PIPE DIESEL CRUDEOIL ANHYDROUS TANZANITE SUNSTONE RUBY SAPPHIRE DIAMOND EMERALD GEMDIRT CONCENTRATE TAILINGS GOLD</fillTypeCategory>
     </fillTypeCategories>
 	
 	
     <fillTypeSounds>
-        <fillTypeSound fillTypes="DIRT CONCENTRATE TAILINGS PIPE  DIESEL ANHYDROUS TANZANITE SUNSTONE OPAL SAPPHIRE EMERALD DIAMOND RUBY GEMDIRT GOLD">
+        <fillTypeSound fillTypes="DIRT DIRT1 CONCASSE STONE CONCENTRATE TAILINGS PIPE  DIESEL ANHYDROUS TANZANITE SUNSTONE OPAL SAPPHIRE EMERALD DIAMOND RUBY GEMDIRT GOLD">
             <sound template="grainLargeFill"/>
         </fillTypeSound>
     </fillTypeSounds>
