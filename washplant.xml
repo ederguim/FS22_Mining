@@ -76,9 +76,9 @@
 					<input fillType="DIESEL" amount="300" />
                 </inputs>
                 <outputs>
-					<output fillType="TAILINGS" amount="16450" />
-                    <output fillType="CONCENTRATE"  amount="100" />
-                    <output fillType="GEMDIRT"  amount="450" />
+					<output fillType="TAILINGS" amount="16372" />
+                    <output fillType="CONCENTRATE"  amount="86" />
+                    <output fillType="GEMDIRT"  amount="542" />
                 </outputs>
             </production>
 
@@ -88,9 +88,9 @@
 					<input fillType="DIESEL" amount="300" />
                 </inputs>
                 <outputs>
-					<output fillType="TAILINGS" amount="13450" />
-                    <output fillType="CONCENTRATE"  amount="100" />
-                    <output fillType="GEMDIRT"  amount="450" />
+					<output fillType="TAILINGS" amount="13294" />
+                    <output fillType="CONCENTRATE"  amount="94" />
+                    <output fillType="GEMDIRT"  amount="612" />
                 </outputs>
             </production>
 		
@@ -100,9 +100,9 @@
 					<input fillType="DIESEL" amount="300"/>
                 </inputs>
                 <outputs>
-					<output fillType="TAILINGS" amount="16450" />
-                    <output fillType="CONCENTRATE"  amount="100" />
-                    <output fillType="GEMDIRT"  amount="450" />
+					<output fillType="TAILINGS" amount="16372" />
+                    <output fillType="CONCENTRATE"  amount="86" />
+                    <output fillType="GEMDIRT"  amount="542" />
                 </outputs>
             </production>
 
@@ -112,9 +112,9 @@
 					<input fillType="DIESEL" amount="300"/>
                 </inputs>
                 <outputs>
-					<output fillType="TAILINGS" amount="13450" />
-                    <output fillType="CONCENTRATE"  amount="100" />
-                    <output fillType="GEMDIRT"  amount="450" />
+					<output fillType="TAILINGS" amount="13294" />
+                    <output fillType="CONCENTRATE"  amount="94" />
+                    <output fillType="GEMDIRT"  amount="612" />
                 </outputs>
             </production>
 

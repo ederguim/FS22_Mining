@@ -67,7 +67,7 @@
         <productions sharedThroughputCapacity="false">
             <production id="GoldSmelter2" name="Gold Smelter Portable" params="" cyclesPerHour="15" costsPerActiveHour="3">
                 <inputs>
-                    <input fillType="GOLD" amount="2" buyFactor="100" />
+                    <input fillType="GOLD" amount="1.44" buyFactor="100" />
                 </inputs>
                 <outputs>
                     <output fillType="GOLDBAR"  amount="1" />

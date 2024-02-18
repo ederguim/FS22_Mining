@@ -173,7 +173,7 @@
 	
 		<fillType name="GOLD" title="$l10n_fillType_gold" showOnPriceTable="true">
             <physics massPerLiter="0,001" maxPhysicalSurfaceAngle="0" />
-            <economy pricePerLiter="42.0">
+            <economy pricePerLiter="46.2">
 			    <factors>
                     <factor period="1"  value="0.88" />
                     <factor period="2"  value="0.92" />
@@ -195,7 +195,7 @@
 		
 		<fillType name="GOLDBAR" title="Gold Bars" showOnPriceTable="true" achievementName="DeliveryStones" unitShort="$l10n_unit_literShort">
             <physics massPerLiter="0,001" maxPhysicalSurfaceAngle="0" />
-            <economy pricePerLiter="48.0" >
+            <economy pricePerLiter="54.6" >
 			    <factors>
                     <factor period="1"  value="0.88" />
                     <factor period="2"  value="0.92" />

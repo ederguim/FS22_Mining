@@ -68,11 +68,11 @@
         <productions sharedThroughputCapacity="false">
             <production id="GoldWashRoom" name="Gold Wash Room" params="" cyclesPerHour="15" costsPerActiveHour="1">
                 <inputs>
-                    <input fillType="CONCENTRATE" amount="200" buyFactor="30"/>
+                    <input fillType="CONCENTRATE" amount="137" buyFactor="30"/>
 					<input fillType="DIESEL" amount="10" buyFactor="5"/>
                 </inputs>
                 <outputs>
-                    <output fillType="GOLD"  amount="2" />
+                    <output fillType="GOLD"  amount="1" />
                 </outputs>
             </production>
         </productions>
