@@ -76,8 +76,8 @@
         </productions>
 
         <storage isExtension="false" fillLevelSyncThreshold="50">
-            <capacity fillType="GOLDBAR"   capacity="10" />
-            <capacity fillType="GOLD"   capacity="10" />
+            <capacity fillType="GOLDBAR"   capacity="20" />
+            <capacity fillType="GOLD"   capacity="20" />
         </storage>
 
         <sellingStation node="goldbar" supportsExtension="false">

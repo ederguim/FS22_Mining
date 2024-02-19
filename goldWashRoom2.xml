@@ -80,7 +80,7 @@
         <storage isExtension="false" fillLevelSyncThreshold="50" >
             <capacity fillType="CONCENTRATE"   capacity="2000" />
 			<capacity fillType="DIESEL"   capacity="500" />
-            <capacity fillType="GOLD"   capacity="20" />
+            <capacity fillType="GOLD"   capacity="50" />
         </storage>
 
         <sellingStation node="concentrate" supportsExtension="false">

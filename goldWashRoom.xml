@@ -78,9 +78,9 @@
         </productions>
 
         <storage isExtension="false" fillLevelSyncThreshold="50" >
-            <capacity fillType="CONCENTRATE"   capacity="5000" />
-			<capacity fillType="DIESEL"   capacity="500" />
-            <capacity fillType="GOLD"   capacity="50" />
+            <capacity fillType="CONCENTRATE"   capacity="10000" />
+			<capacity fillType="DIESEL"   capacity="1000" />
+            <capacity fillType="GOLD"   capacity="100" />
         </storage>
 
         <sellingStation node="concentrate" supportsExtension="false">
