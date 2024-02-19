@@ -70,10 +70,10 @@
 
     <productionPoint>
         <productions sharedThroughputCapacity="false">
-			<production id="STONE" name="Pedra" params="l10n_fillType_concentrate | l10n_fillType_stone | l10n_fillType_dirt |l10n_fillType_tailings" cyclesPerHour="5" costsPerActiveHour="1000">
+			<production id="STONE" name="Pedra" params="l10n_fillType_concentrate | l10n_fillType_stone | l10n_fillType_dirt |l10n_fillType_tailings" cyclesPerHour="10" costsPerActiveHour="1000">
                 <inputs>
                     <input fillType="STONE" amount="17000" />
-					<input fillType="DIESEL" amount="300" />
+					<input fillType="DIESEL" amount="170" />
                 </inputs>
                 <outputs>
 					<output fillType="TAILINGS" amount="16372" />
@@ -82,10 +82,10 @@
                 </outputs>
             </production>
 
-            <production id="DIRT" name="Terra"  cyclesPerHour="5" costsPerActiveHour="1000">
+            <production id="DIRT" name="Terra"  cyclesPerHour="10" costsPerActiveHour="1000">
                 <inputs>
                     <input fillType="DIRT" amount="14000" />
-					<input fillType="DIESEL" amount="300" />
+					<input fillType="DIESEL" amount="140" />
                 </inputs>
                 <outputs>
 					<output fillType="TAILINGS" amount="13294" />
@@ -94,10 +94,10 @@
                 </outputs>
             </production>
 		
-            <production id="CONCASSE" name="Pedra Azura" params="l10n_fillType_concentrate | l10n_fillType_stone | l10n_fillType_gemdirt |l10n_fillType_tailings" cyclesPerHour="5" costsPerActiveHour="1000">
+            <production id="CONCASSE" name="Pedra Azura" params="l10n_fillType_concentrate | l10n_fillType_stone | l10n_fillType_gemdirt |l10n_fillType_tailings" cyclesPerHour="10" costsPerActiveHour="1000">
                 <inputs>
                     <input fillType="CONCASSE" amount="17000"/>
-					<input fillType="DIESEL" amount="300"/>
+					<input fillType="DIESEL" amount="170"/>
                 </inputs>
                 <outputs>
 					<output fillType="TAILINGS" amount="16372" />
@@ -106,10 +106,10 @@
                 </outputs>
             </production>
 
-            <production id="GemDirt" name="Terra Azura"  cyclesPerHour="5" costsPerActiveHour="1000">
+            <production id="GemDirt" name="Terra Azura"  cyclesPerHour="10" costsPerActiveHour="1000">
                 <inputs>
                     <input fillType="DIRT1" amount="14000"/>
-					<input fillType="DIESEL" amount="300"/>
+					<input fillType="DIESEL" amount="140"/>
                 </inputs>
                 <outputs>
 					<output fillType="TAILINGS" amount="13294" />
