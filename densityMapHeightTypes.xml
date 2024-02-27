@@ -5,7 +5,6 @@
     <densityMapHeightTypes>
 		<densityMapHeightType fillTypeName="GOLD" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
             <collision scale="0.9" baseOffset="0.10" minOffset="0.20" maxOffset="0.60" />
-
 		<densityMapHeightType fillTypeName="COAL" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
             <collision scale="0.9" baseOffset="0.10" minOffset="0.20" maxOffset="0.60" />
         </densityMapHeightType>

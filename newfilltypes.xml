@@ -379,17 +379,17 @@
 		<fillType name="CONCASSE" title="CONCASSE" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
 			<physics massPerLiter="0.53" maxPhysicalSurfaceAngle="25" />
 			<economy pricePerLiter="0.603" />
-			<image      hud     ="fillPlanesTP/fillPlanesTP/hud_fill_concasse.png" />
+			<image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_concasse.png" />
 			<textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/concasse_diffuse.png"
 						normal  ="fillPlanesTP/fruit_tp_ground_texture/concasse_normal.png"
 						specular="fillPlanesTP/fruit_tp_ground_texture/concasse_specular.png"
 						distance="fillPlanesTP/fruit_tp_ground_texture/concasseDistance_diffuse.png" />
 		</fillType>
 		
-		<fillType name="DIRT1" title="DIRT AZURA" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+		<fillType name="DIRT1" title="DIRT1" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
 			<physics massPerLiter="0" maxPhysicalSurfaceAngle="25" />
 			<economy pricePerLiter="0.532" />
-			<image      hud     ="fillPlanesTP/fillPlanesTP/hud_fill_dirt1.png" />
+			<image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_dirt1.png" />
 			<textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/dirt1_diffuse.png"
 						normal  ="fillPlanesTP/fruit_tp_ground_texture/dirt1_normal.png"
 						specular="fillPlanesTP/fruit_tp_ground_texture/dirt1_specular.png"
@@ -424,7 +424,7 @@
                     <factor period="12" value="0.90" />
                 </factors>
 			</economy>
-            <image      hud     ="fillPlanesTP/fillPlanesTP/hud_fill_dirt.png" />
+            <image      hud     ="fillPlanesTP/fruit_tp_hud/hud_fill_dirt.png" />
             <textures   diffuse ="fillPlanesTP/fruit_tp_ground_texture/dirt_diffuse.dds"
                         normal  ="fillPlanesTP/fruit_tp_ground_texture/dirt_normal.dds"
                         specular="fillPlanesTP/fruit_tp_ground_texture/dirt_specular.png"
